@@ -28,29 +28,57 @@
 </head>
 <body>
   <header class="nav">
-    <div class="container nav-inner">
-      <a class="brand" href="index.html" aria-label="KeepsVault home">
-        <img src="assets/logo.svg" alt="KeepsVault logo" />
-        <span>KeepsVault</span>
-      </a>
-      <nav class="nav-right">
-        <div class="nav-links">
-          <a class="pill" href="#features">Features</a>
-          <a class="pill" href="#pricing">Pricing</a>
-          <a class="pill" href="#about">About</a>
-          <a class="pill" href="#help">Help</a>
-          <a class="pill" href="#contact">Contact</a>
-        </div>
-        <button class="btn btn-ghost" id="loginBtn">Login</button>
-        <button class="btn btn-primary" id="signupBtn">Sign up</button>
-        <select id="themeSwitch" class="btn" aria-label="Change colour theme">
-          <option value="">Amber</option>
-          <option value="theme-blue">Blue</option>
-          <option value="theme-emerald">Emerald</option>
-        </select>
-      </nav>
+  <div class="container nav-inner">
+    <a class="brand" href="./" aria-label="KeepsVault home">
+      <img src="assets/logo.svg" alt="KeepsVault logo" />
+      <span>KeepsVault</span>
+    </a>
+
+    <!-- Mobile menu button -->
+    <button class="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="menuDrawer">
+      <!-- simple burger -->
+      <span></span><span></span><span></span>
+    </button>
+
+    <!-- Desktop actions -->
+    <nav class="nav-right">
+      <div class="nav-links">
+        <a class="pill" href="#features">Features</a>
+        <a class="pill" href="#pricing">Pricing</a>
+        <a class="pill" href="#about">About</a>
+        <a class="pill" href="#help">Help</a>
+        <a class="pill" href="#contact">Contact</a>
+      </div>
+      <button class="btn btn-ghost" id="loginBtn">Login</button>
+      <button class="btn btn-primary" id="signupBtn">Sign up</button>
+      <select id="themeSwitch" class="btn" aria-label="Change colour theme">
+        <option value="">Amber</option>
+        <option value="theme-blue">Blue</option>
+        <option value="theme-emerald">Emerald</option>
+      </select>
+    </nav>
+  </div>
+
+  <!-- Mobile drawer (hidden on desktop) -->
+  <div id="menuDrawer" class="menu-drawer" hidden>
+    <a class="pill" href="#features">Features</a>
+    <a class="pill" href="#pricing">Pricing</a>
+    <a class="pill" href="#about">About</a>
+    <a class="pill" href="#help">Help</a>
+    <a class="pill" href="#contact">Contact</a>
+    <div class="row" style="margin-top:.75rem;">
+      <button class="btn btn-ghost" id="loginBtn_m">Login</button>
+      <button class="btn btn-primary" id="signupBtn_m">Sign up</button>
     </div>
-  </header>
+    <label class="label" style="margin-top:.75rem;">Theme</label>
+    <select id="themeSwitch_m" class="btn" aria-label="Change colour theme (mobile)">
+      <option value="">Amber</option>
+      <option value="theme-blue">Blue</option>
+      <option value="theme-emerald">Emerald</option>
+    </select>
+  </div>
+</header>
+
 
   <main id="home" class="container">
     <!-- HERO -->
