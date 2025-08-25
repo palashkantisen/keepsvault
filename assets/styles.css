@@ -4,11 +4,11 @@
 :root{
   --bg:#0b0c0f; --bg-elev:#111318; --surface:#171a21; --text:#e8eaed; --muted:#a8b0bd;
   --card:#151922; --border:#232837;
-  --brand:#f59e0b; --brand-600:#d97706; --brand-700:#b45309;
-  --brand-25a:rgba(245,158,11,0.25); --ring:rgba(245,158,11,0.35);
-  --brand-bg:rgba(245,158,11,0.07);
+  --brand:#3b82f6; --brand-600:#2563eb; --brand-700:#1d4ed8;
+  --brand-25a:rgba(59,130,246,0.25); --ring:rgba(59,130,246,0.35);
+  --brand-bg:rgba(59,130,246,0.07);
 }
-.theme-blue   { --brand:#3b82f6; --brand-600:#2563eb; --brand-700:#1d4ed8; --brand-25a:rgba(59,130,246,0.25); --ring:rgba(59,130,246,0.35); --brand-bg:rgba(59,130,246,0.07); }
+.theme-amber  { --brand:#f59e0b; --brand-600:#d97706; --brand-700:#b45309; --brand-25a:rgba(245,158,11,0.25); --ring:rgba(245,158,11,0.35); --brand-bg:rgba(245,158,11,0.07); }
 .theme-emerald{ --brand:#10b981; --brand-600:#059669; --brand-700:#047857; --brand-25a:rgba(16,185,129,0.25); --ring:rgba(16,185,129,0.35); --brand-bg:rgba(16,185,129,0.07); }
 
 /* ------------------------------
