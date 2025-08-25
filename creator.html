@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>KeepsVault – Creator Story</title>
+  <meta name="robots" content="noindex, nofollow">
+  <!-- keep this ABOVE <link rel="stylesheet"> -->
+  <script>
+  (function () {
+    try {
+      var t = localStorage.getItem('kv-theme');
+      if (t) { document.documentElement.classList.add(t); } // put theme on <html>
+    } catch (e) {}
+  })();
+  </script>
+
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html"><img src="assets/logo.svg" alt="KeepsVault" /><span>KeepsVault</span></a>
+    </div>
+  </header>
+
+  <main class="container section">
+    <h1>The Story Behind KeepsVault</h1>
+    
+    <div class="card">
+      <h2>How it all began</h2>
+      <p>KeepsVault started from a simple frustration that I think many of us share: the chaos of important documents scattered everywhere.</p>
+      
+      <p>I was helping my parents organize their paperwork when I realized there had to be a better way. Passports, medical records, insurance documents, warranties - all these important things were in different places, making it impossible to find what we needed when we needed it.</p>
+    </div>
+
+    <div class="card">
+      <h2>The problem we're solving</h2>
+      <p>Every family faces the same challenges:</p>
+      <ul class="muted">
+        <li><strong>Lost documents:</strong> Important papers get misplaced or forgotten</li>
+        <li><strong>Scattered information:</strong> Family details spread across multiple apps and files</li>
+        <li><strong>Sharing difficulties:</strong> Hard to safely share documents with family or professionals</li>
+        <li><strong>Missed deadlines:</strong> Renewals and appointments forgotten</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Why I built this</h2>
+      <p>I wanted to create something that would:</p>
+      <ul class="muted">
+        <li><strong>Simplify life:</strong> One place for everything important</li>
+        <li><strong>Keep families safe:</strong> Emergency information always accessible</li>
+        <li><strong>Respect privacy:</strong> Your data stays yours, shared only when you choose</li>
+        <li><strong>Work everywhere:</strong> Access from any device, anywhere in the world</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Our values</h2>
+      <p>KeepsVault is built on three core principles:</p>
+      <ul class="muted">
+        <li><strong>Privacy first:</strong> We believe your personal information should remain private and secure</li>
+        <li><strong>Simplicity:</strong> Technology should make life easier, not more complicated</li>
+        <li><strong>Global accessibility:</strong> Everyone deserves secure document management, regardless of where they live</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Join the journey</h2>
+      <p>This is just the beginning. I'm building KeepsVault to help families around the world organize their lives better. Whether you're in New York, London, Tokyo, or anywhere else, I want this tool to work for you.</p>
+      
+      <p>Your feedback and suggestions will shape how KeepsVault evolves. Together, we can create something that truly makes a difference in people's lives.</p>
+      
+      <p class="muted">— The KeepsVault Team</p>
+    </div>
+
+    <div class="card center">
+      <a href="index.html" class="btn btn-primary">Back to Home</a>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="row" style="justify-content:space-between;">
+        <div>© <span id="y"></span> KeepsVault</div>
+        <div class="row">
+          <a href="index.html">Home</a>
+          <span class="muted">·</span>
+          <a href="terms.html">Terms</a>
+          <span class="muted">·</span>
+          <a href="privacy.html">Privacy</a>
+          <span class="muted">·</span>
+          <a href="security.html">Security</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+  <script src="assets/script.js"></script>
+</body>
+</html>
