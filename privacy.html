@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>KeepsVault – Privacy Policy</title>
+  <!-- keep this ABOVE <link rel="stylesheet"> -->
+  <script>
+  (function () {
+    try {
+      var t = localStorage.getItem('kv-theme');
+      if (t) { document.documentElement.classList.add(t); } // put theme on <html>
+    } catch (e) {}
+  })();
+  </script>
+
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html"><img src="assets/logo.svg" alt="KeepsVault" /><span>KeepsVault</span></a>
+    </div>
+  </header>
+
+  <main class="container section">
+    <h1>Privacy Policy</h1>
+    <div class="card">
+      <p>This policy explains how we handle your personal information. We follow the NZ Privacy Act 2020.</p>
+
+      <h2>What we collect</h2>
+      <ul class="muted">
+        <li>Account details (name, email).</li>
+        <li>Your content (cards, files) that you choose to store.</li>
+        <li>Usage data to help run and improve the Service.</li>
+      </ul>
+
+      <h2>How we use it</h2>
+      <ul class="muted">
+        <li>To provide and secure the Service.</li>
+        <li>To support you and respond to requests.</li>
+        <li>To send important notices about the Service.</li>
+      </ul>
+
+      <h2>Sharing</h2>
+      <ul class="muted">
+        <li>We do not sell your data.</li>
+        <li>We may use trusted providers (e.g. hosting) under contract.</li>
+        <li>We may disclose if required by law.</li>
+      </ul>
+
+      <h2>Storage and location</h2>
+      <ul class="muted">
+        <li>Data is stored securely in reputable cloud regions.</li>
+        <li>We apply encryption in transit and at rest.</li>
+      </ul>
+
+      <h2>Your choices</h2>
+      <ul class="muted">
+        <li>You can access, correct, or delete your data, subject to law and backups.</li>
+        <li>You can stop using the Service at any time.</li>
+      </ul>
+
+      <h2>Contact</h2>
+      <p class="muted">To ask about privacy: hello@keepsvault.app</p>
+      <p class="muted">Last updated: <span id="y"></span></p>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="row" style="justify-content:space-between;">
+        <div>© <span id="y2"></span> KeepsVault</div>
+        <div class="row">
+          <a href="terms.html">Terms</a>
+          <span class="muted">·</span>
+          <a href="security.html">Security</a>
+          <span class="muted">·</span>
+          <a href="status.html">Status</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+    document.getElementById('y2').textContent = new Date().getFullYear();
+  </script>
+  <script src="assets/script.js"></script>
+</body>
+</html>

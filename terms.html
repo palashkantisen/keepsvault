@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>KeepsVault – Terms of Service</title>
+  <!-- keep this ABOVE <link rel="stylesheet"> -->
+  <script>
+  (function () {
+    try {
+      var t = localStorage.getItem('kv-theme');
+      if (t) { document.documentElement.classList.add(t); } // put theme on <html>
+    } catch (e) {}
+  })();
+  </script>
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html"><img src="assets/logo.svg" alt="KeepsVault" /><span>KeepsVault</span></a>
+    </div>
+  </header>
+
+  <main class="container section">
+    <h1>Terms of Service</h1>
+    <div class="card">
+      <p>These terms cover your use of KeepsVault (the “Service”). By using the Service you agree to these terms.</p>
+      <h2>Accounts</h2>
+      <ul class="muted">
+        <li>You must provide accurate information.</li>
+        <li>You are responsible for your login and activity in your account.</li>
+      </ul>
+
+      <h2>Plans and payment</h2>
+      <ul class="muted">
+        <li>Free plan: single tree with 10 entries.</li>
+        <li>Premium: $10/month. You can cancel any time. We may change pricing with notice.</li>
+      </ul>
+
+      <h2>Your content</h2>
+      <ul class="muted">
+        <li>You keep ownership of your content.</li>
+        <li>You give us permission to store and process it to run the Service.</li>
+      </ul>
+
+      <h2>Acceptable use</h2>
+      <ul class="muted">
+        <li>No illegal content or activity.</li>
+        <li>No harm to the Service or other users.</li>
+      </ul>
+
+      <h2>Availability and changes</h2>
+      <ul class="muted">
+        <li>The Service is provided “as is”. We aim for good uptime but do not guarantee it.</li>
+        <li>We may update or remove features. We will try to give reasonable notice for material changes.</li>
+      </ul>
+
+      <h2>Liability</h2>
+      <ul class="muted">
+        <li>To the extent allowed by law, we are not liable for indirect or special loss.</li>
+        <li>Our total liability is limited to fees paid in the last 3 months.</li>
+      </ul>
+
+      <h2>Contact</h2>
+      <p class="muted">hello@keepsvault.app</p>
+      <p class="muted">Last updated: <span id="y"></span></p>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="row" style="justify-content:space-between;">
+        <div>© <span id="y2"></span> KeepsVault</div>
+        <div class="row">
+          <a href="privacy.html">Privacy</a>
+          <span class="muted">·</span>
+          <a href="security.html">Security</a>
+          <span class="muted">·</span>
+          <a href="status.html">Status</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+    document.getElementById('y2').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

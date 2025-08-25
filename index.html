@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>KeepsVault – Keep life’s cards secure</title>
+  <meta name="description" content="Create, organise, and share cards and stacks. Your data stays yours." />
+  <meta name="robots" content="noindex, nofollow" />
+
+  <!-- keep this ABOVE <link rel="stylesheet"> -->
+  <script>
+  (function () {
+    try {
+      var t = localStorage.getItem('kv-theme');
+      if (t) { document.documentElement.classList.add(t); } // put theme on <html>
+    } catch (e) {}
+  })();
+  </script>
+
+  <!-- Open Graph / Social -->
+  <meta property="og:title" content="KeepsVault – Keep life’s cards secure" />
+  <meta property="og:description" content="Create, organise, and share cards and stacks. Your data stays yours." />
+  <meta property="og:image" content="/assets/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" href="assets/favicon.svg" />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html" aria-label="KeepsVault home">
+        <img src="assets/logo.svg" alt="KeepsVault logo" />
+        <span>KeepsVault</span>
+      </a>
+      <nav class="nav-right">
+        <div class="nav-links">
+          <a class="pill" href="#features">Features</a>
+          <a class="pill" href="#pricing">Pricing</a>
+          <a class="pill" href="#about">About</a>
+          <a class="pill" href="#help">Help</a>
+          <a class="pill" href="#contact">Contact</a>
+        </div>
+        <button class="btn btn-ghost" id="loginBtn">Login</button>
+        <button class="btn btn-primary" id="signupBtn">Sign up</button>
+        <select id="themeSwitch" class="btn" aria-label="Change colour theme">
+          <option value="">Amber</option>
+          <option value="theme-blue">Blue</option>
+          <option value="theme-emerald">Emerald</option>
+        </select>
+      </nav>
+    </div>
+  </header>
+
+  <main id="home" class="container">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-left">
+        <div class="kicker">Safe place for life’s memories & documents</div>
+        <h1>Keep life’s cards secure.<br/>Share when you choose.</h1>
+        <p class="muted">Create cards for documents, people, dates, and files. Group them in stacks. Share with the right people. Your data stays yours.</p>
+
+        <div class="row" style="margin-top:1rem;">
+          <a class="btn btn-primary" href="#signup">Try it free</a>
+          <a class="btn" href="#how">See how it works</a>
+        </div>
+
+        <div class="spacer"></div>
+        <div class="row muted">
+          <span class="bar-tag">Privacy first</span>
+          <span class="bar-tag">Simple to use</span>
+          <span class="bar-tag">Works anywhere</span>
+        </div>
+
+        <!-- Cards demo -->
+        <div class="hero-cards">
+          <div class="mosaic">
+            <div class="demo-card m1">
+              <span class="tag">Card · Passport</span>
+              <h3>Renewal date</h3>
+              <p class="muted">12 Feb 2027</p>
+            </div>
+            <div class="demo-card m2">
+              <span class="tag">Card · Emergency</span>
+              <h3>Contacts</h3>
+              <p class="muted">Family · GP · Insurance</p>
+            </div>
+            <div class="demo-card m3">
+              <span class="tag">Stack · Health</span>
+              <h3>Immunisations</h3>
+              <p class="muted">PDF uploads · Notes</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="logo-panel">
+          <img src="assets/logo.svg" alt="KeepsVault logo full" />
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section id="how" class="section">
+      <h2>How it works</h2>
+      <div class="grid grid-3" style="margin-top:1rem;">
+        <div class="card step">
+          <div class="n">1</div>
+          <div>
+            <h3>Create</h3>
+            <p class="muted">Start a card for each item: document, note, date, or person.</p>
+          </div>
+        </div>
+        <div class="card step">
+          <div class="n">2</div>
+          <div>
+            <h3>Organise</h3>
+            <p class="muted">Group cards into stacks. Drag to reorder. Keep it tidy.</p>
+          </div>
+        </div>
+        <div class="card step">
+          <div class="n">3</div>
+          <div>
+            <h3>Share & keep safe</h3>
+            <p class="muted">Share a card or a stack. Pick view or edit. You stay in control.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES (click to expand details) -->
+    <section id="features" class="section">
+      <h2>Features</h2>
+      <div class="grid grid-3" style="margin-top:1rem;">
+        <article class="card" data-expand>
+          <h3>Cards & stacks</h3>
+          <p class="muted">Sort life into small pieces you can keep current.</p>
+          <button class="btn btn-ghost" data-toggle>Read more</button>
+          <div class="muted" hidden>
+            <ul>
+              <li>Cards for notes, files, dates, people</li>
+              <li>Stacks to group by topic</li>
+              <li>Reorder by drag and drop (app)</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="card" data-expand>
+          <h3>Secure sharing</h3>
+          <p class="muted">Share only what’s needed, with clear access.</p>
+          <button class="btn btn-ghost" data-toggle>Read more</button>
+          <div class="muted" hidden>
+            <ul>
+              <li>Share a single card or a whole stack</li>
+              <li>View or edit access</li>
+              <li>Stop sharing any time</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="card" data-expand>
+          <h3>Files & notes</h3>
+          <p class="muted">Attach PDFs and images. Add notes and dates.</p>
+          <button class="btn btn-ghost" data-toggle>Read more</button>
+          <div class="muted" hidden>
+            <ul>
+              <li>PDF, image, and doc uploads</li>
+              <li>Inline notes</li>
+              <li>Quick search (app)</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="card" data-expand>
+          <h3>Reminders</h3>
+          <p class="muted">Set alerts for renewals and key dates.</p>
+          <button class="btn btn-ghost" data-toggle>Read more</button>
+          <div class="muted" hidden>
+            <ul>
+              <li>Email reminders</li>
+              <li>Snooze by a week or month</li>
+              <li>Export upcoming dates (app)</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="card" data-expand>
+          <h3>Works anywhere</h3>
+          <p class="muted">Web-based and mobile-ready.</p>
+          <button class="btn btn-ghost" data-toggle>Read more</button>
+          <div class="muted" hidden>
+            <ul>
+              <li>No install needed</li>
+              <li>Responsive layout</li>
+              <li>Fast to load</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="card" data-expand>
+          <h3>Privacy by design</h3>
+          <p class="muted">You decide who sees what.</p>
+          <button class="btn btn-ghost" data-toggle>Read more</button>
+          <div class="muted" hidden>
+            <ul>
+              <li>Clear access controls</li>
+              <li>Limited data collection</li>
+              <li>NZ Privacy Act 2020 aligned</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- WHY -->
+    <section class="section">
+      <h2>Why KeepsVault</h2>
+      <div class="grid grid-3" style="margin-top:1rem;">
+        <article class="card" data-expand>
+          <h3>Privacy</h3>
+          <p class="muted">You choose who sees your cards.</p>
+          <button class="btn btn-ghost" data-toggle>Read more</button>
+          <div class="muted" hidden>
+            <ul><li>No sharing by default. You control it.</li></ul>
+          </div>
+        </article>
+        <article class="card" data-expand>
+          <h3>Security</h3>
+          <p class="muted">Strong protections for data and files.</p>
+          <button class="btn btn-ghost" data-toggle>Read more</button>
+          <div class="muted" hidden>
+            <ul>
+              <li>Encryption at rest and in transit</li>
+              <li>Backups and monitoring</li>
+              <li>Access control in the app</li>
+            </ul>
+          </div>
+        </article>
+        <article class="card" data-expand>
+          <h3>Simplicity</h3>
+          <p class="muted">Quick to set up. Easy to keep current.</p>
+          <button class="btn btn-ghost" data-toggle>Read more</button>
+          <div class="muted" hidden>
+            <ul><li>Plain language, clean UI</li></ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="section-compact">
+      <h2>People using KeepsVault</h2>
+      <div class="grid grid-3" style="margin-top:1rem;">
+        <div class="card"><p>“One place for passports, warranties, and health stuff.”</p><p class="muted">— A parent</p></div>
+        <div class="card"><p>“Shared our emergency plan with whānau in minutes.”</p><p class="muted">— A couple</p></div>
+        <div class="card"><p>“Simple for Mum to use. We keep things up to date.”</p><p class="muted">— Adult child</p></div>
+      </div>
+    </section>
+
+    <!-- PRICING -->
+    <section id="pricing" class="section">
+      <h2>Pricing</h2>
+      <div class="grid grid-2" style="margin-top:1rem;">
+        <div class="card plan">
+          <h3>Free</h3>
+          <p class="muted">Good for starting out.</p>
+          <div class="price">$0</div>
+          <ul>
+            <li><span class="tick"></span><span>Single tree with 10 entries</span></li>
+            <li><span class="tick"></span><span>Unlimited access for shared items</span></li>
+          </ul>
+          <div class="spacer"></div>
+          <button class="btn" id="signupBtn2">Get started</button>
+        </div>
+        <div class="card plan">
+          <h3>Premium</h3>
+          <p class="muted">For full use.</p>
+          <div class="price">$10<span style="font-size:1rem; font-weight:600;">/month</span></div>
+          <ul>
+            <li><span class="tick"></span><span>Unlimited trees & entries</span></li>
+            <li><span class="tick"></span><span>Sharing with access control</span></li>
+            <li><span class="tick"></span><span>File uploads</span></li>
+            <li><span class="tick"></span><span>Alerts & reminders</span></li>
+          </ul>
+          <div class="spacer"></div>
+          <button class="btn btn-primary" id="signupBtn3">Go Premium</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <h2>About</h2>
+      <div class="card">
+        <p>KeepsVault makes it easy to keep important things in one place and share safely with whānau. It is simple to use, with clear controls for privacy and access. Our focus is trust, security, and plain language.</p>
+      </div>
+    </section>
+
+    <!-- HELP / FAQ -->
+    <section id="help" class="section">
+      <h2>Help / FAQ</h2>
+      <details open>
+        <summary>What is a “card”?</summary>
+        <p class="muted">A card is one item. It can be a note, a file, a date, or a person. You can group cards into stacks.</p>
+      </details>
+      <details>
+        <summary>How do I share?</summary>
+        <p class="muted">Open a card or stack and choose who to share with. Pick view or edit.</p>
+      </details>
+      <details>
+        <summary>Can others edit?</summary>
+        <p class="muted">Only if you give edit access. You can change this any time.</p>
+      </details>
+      <details>
+        <summary>Is my info safe?</summary>
+        <p class="muted">We use strong security and privacy controls. Your data stays yours.</p>
+      </details>
+    </section>
+
+    <!-- NOT READY NOTE (for Sign in/Sign up clicks) -->
+    <div id="notReady" class="card center" style="margin: 1rem 0;" hidden>
+      <p class="muted">The app is not yet ready. Please check back soon.</p>
+    </div>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <div class="grid grid-2" style="margin-top:1rem;">
+        <form class="card"
+          action="https://docs.google.com/forms/d/e/1FAIpQLSc_QXm45kU1FXEzifB0EBrh524mJoX4ADVWOTey-bBPyoZYcQ/formResponse"
+          method="POST"
+          target="_blank">
+          <div class="form-grid">
+            <label class="label" for="g-name">Name</label>
+            <input id="g-name" class="input" name="entry.758747723" placeholder="Your name" required />
+
+            <label class="label" for="g-email">Email</label>
+            <input id="g-email" class="input" type="email" name="entry.915788050" placeholder="you@example.com" required />
+
+            <label class="label" for="g-msg">Message</label>
+            <textarea id="g-msg" class="textarea" name="entry.1522033606" placeholder="Kia ora, I’d like to know…" required></textarea>
+
+            <button class="btn btn-primary" type="submit">Send</button>
+          </div>
+        </form>
+
+        <div class="card">
+          <h3>Other ways</h3>
+          <p class="muted">Email: <a href="mailto:hello@keepsvault.app?subject=KeepsVault%20support%20request">hello@keepsvault.app</a></p>
+          <p class="muted">We aim to reply within 2 working days.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="row" style="justify-content:space-between;">
+        <div>© <span id="y"></span> KeepsVault</div>
+        <div class="row">
+          <a href="terms.html">Terms</a>
+          <span class="muted">·</span>
+          <a href="privacy.html">Privacy</a>
+          <span class="muted">·</span>
+          <a href="security.html">Security</a>
+          <span class="muted">·</span>
+          <a href="status.html">Status</a>
+          <span class="muted">·</span>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/script.js"></script>
+</body>
+</html>

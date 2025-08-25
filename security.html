@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>KeepsVault – Security</title>
+  <!-- keep this ABOVE <link rel="stylesheet"> -->
+  <script>
+  (function () {
+    try {
+      var t = localStorage.getItem('kv-theme');
+      if (t) { document.documentElement.classList.add(t); } // put theme on <html>
+    } catch (e) {}
+  })();
+  </script>
+
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html"><img src="assets/logo.svg" alt="KeepsVault" /><span>KeepsVault</span></a>
+    </div>
+  </header>
+
+  <main class="container section">
+    <h1>Security</h1>
+    <div class="card">
+      <p>This page gives a plain view of how we protect your data.</p>
+
+      <h2>Data protection</h2>
+      <ul class="muted">
+        <li>Encryption in transit (HTTPS/TLS) and at rest.</li>
+        <li>Backups with regular restore tests.</li>
+        <li>Least-privilege access for staff and systems.</li>
+      </ul>
+
+      <h2>Account security</h2>
+      <ul class="muted">
+        <li>Strong passwords recommended; MFA planned for app launch.</li>
+        <li>Session management with expiry.</li>
+      </ul>
+
+      <h2>Operations</h2>
+      <ul class="muted">
+        <li>Monitoring and alerting for core services.</li>
+        <li>Change control and review of key components.</li>
+      </ul>
+
+      <h2>Incidents</h2>
+      <ul class="muted">
+        <li>We will investigate and notify affected users where required by law.</li>
+        <li>Contact: hello@keepsvault.app</li>
+      </ul>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="row" style="justify-content:space-between;">
+        <div>© <span id="y"></span> KeepsVault</div>
+        <div class="row">
+          <a href="terms.html">Terms</a>
+          <span class="muted">·</span>
+          <a href="privacy.html">Privacy</a>
+          <span class="muted">·</span>
+          <a href="status.html">Status</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
