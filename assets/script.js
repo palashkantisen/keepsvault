@@ -1,44 +1,27 @@
-// Footer year
+// ==============================
+// INITIALIZATION
+// ==============================
 document.addEventListener('DOMContentLoaded', () => {
+  // Footer year
   const y = document.getElementById('y');
   if (y) y.textContent = new Date().getFullYear();
-});
 
-// Theme switcher
-const select = document.getElementById('themeSwitch');
-if (select) {
-  select.addEventListener('change', () => {
-    document.body.classList.remove('theme-blue', 'theme-emerald');
-    if (select.value) document.body.classList.add(select.value);
-  });
-}
-
-// “Not ready” note for login/signup
-const notReady = () => {
-  const box = document.getElementById('notReady');
-  if (!box) return;
-  box.hidden = false;
-  box.scrollIntoView({ behavior: 'smooth', block: 'center' });
-};
-['loginBtn','signupBtn','signupBtn2','signupBtn3'].forEach(id=>{
-  const el = document.getElementById(id);
-  if (el) el.addEventListener('click', notReady);
-});
-
-// Expand/Collapse “Read more” cards
-document.addEventListener('click', (e) => {
-  const t = e.target.closest('[data-toggle]');
-  if (!t) return;
-  const box = t.parentElement.querySelector('div[hidden],div[data-extra]');
-  if (!box) return;
-  box.hidden = !box.hidden;
-  t.textContent = box.hidden ? 'Read more' : 'Hide';
+  // Initialize theme switchers
+  initTheme();
+  
+  // Initialize mobile menu
+  initMobileMenu();
+  
+  // Initialize expandable cards
+  initExpandableCards();
+  
+  // Initialize "not ready" notices
+  initNotReadyNotices();
 });
 
 // ==============================
 // THEME HANDLING
 // ==============================
-
 const THEMES = ['theme-blue', 'theme-emerald'];
 
 function applyTheme(val) {
@@ -47,100 +30,127 @@ function applyTheme(val) {
   if (val) el.classList.add(val);
 }
 
-(function initTheme() {
+function initTheme() {
   try {
     const saved = localStorage.getItem('kv-theme') || '';
     if (saved) applyTheme(saved);
 
-    const select = document.getElementById('themeSwitch');
-    if (!select) return;
+    // Get both theme selectors (desktop and mobile)
+    const selectDesktop = document.getElementById('themeSwitch');
+    const selectMobile = document.getElementById('themeSwitch_m');
 
-    if (saved) select.value = saved; // sync dropdown
-    select.addEventListener('change', () => {
-      const val = select.value;
+    // Set initial values
+    if (saved) {
+      if (selectDesktop) selectDesktop.value = saved;
+      if (selectMobile) selectMobile.value = saved;
+    }
+
+    // Add change listeners
+    const onChange = (e) => {
+      const val = e.target.value;
       applyTheme(val);
       localStorage.setItem('kv-theme', val);
-    });
+      
+      // Keep both selects in sync
+      const otherId = e.target.id === 'themeSwitch' ? 'themeSwitch_m' : 'themeSwitch';
+      const other = document.getElementById(otherId);
+      if (other) other.value = val;
+    };
+
+    if (selectDesktop) selectDesktop.addEventListener('change', onChange);
+    if (selectMobile) selectMobile.addEventListener('change', onChange);
   } catch (e) {
     console.error('Theme init failed', e);
   }
-})();
-
-// ----- Theme handling (unchanged, but ensure both selects work) -----
-const THEMES = ['theme-blue', 'theme-emerald'];
-function applyTheme(val){
-  const el = document.documentElement;
-  THEMES.forEach(c=>el.classList.remove(c));
-  if (val) el.classList.add(val);
 }
-(function initTheme(){
-  const saved = localStorage.getItem('kv-theme') || '';
-  if (saved) applyTheme(saved);
-  const syncSelect = (sel) => { if (sel && saved) sel.value = saved; };
-  syncSelect(document.getElementById('themeSwitch'));
-  syncSelect(document.getElementById('themeSwitch_m'));
-  const onChange = (e)=>{
-    const v = e.target.value;
-    applyTheme(v);
-    localStorage.setItem('kv-theme', v);
-    // keep both selects in sync
-    const otherId = e.target.id === 'themeSwitch' ? 'themeSwitch_m' : 'themeSwitch';
-    const other = document.getElementById(otherId);
-    if (other) other.value = v;
-  };
-  const s1 = document.getElementById('themeSwitch');
-  const s2 = document.getElementById('themeSwitch_m');
-  if (s1) s1.addEventListener('change', onChange);
-  if (s2) s2.addEventListener('change', onChange);
-})();
 
-// ----- Mobile menu toggle -----
-(function(){
+// ==============================
+// MOBILE MENU
+// ==============================
+function initMobileMenu() {
   const btn = document.querySelector('.menu-btn');
   const drawer = document.getElementById('menuDrawer');
+  
   if (!btn || !drawer) return;
 
   const toggle = () => {
-    const open = drawer.hasAttribute('hidden') ? false : true;
-    if (open) {
-      drawer.setAttribute('hidden', '');
-      btn.setAttribute('aria-expanded', 'false');
-    } else {
+    const isHidden = drawer.hasAttribute('hidden');
+    
+    if (isHidden) {
+      // Open menu
       drawer.removeAttribute('hidden');
       btn.setAttribute('aria-expanded', 'true');
+    } else {
+      // Close menu
+      drawer.setAttribute('hidden', '');
+      btn.setAttribute('aria-expanded', 'false');
     }
   };
+
   btn.addEventListener('click', toggle);
 
   // Close drawer when clicking a link (better UX)
-  drawer.addEventListener('click', (e)=>{
+  drawer.addEventListener('click', (e) => {
     if (e.target.tagName === 'A' || e.target.closest('a')) {
-      drawer.setAttribute('hidden','');
-      btn.setAttribute('aria-expanded','false');
+      drawer.setAttribute('hidden', '');
+      btn.setAttribute('aria-expanded', 'false');
     }
   });
 
   // Close on resize back to desktop
-  window.addEventListener('resize', ()=>{
+  window.addEventListener('resize', () => {
     if (window.innerWidth > 820) {
-      drawer.setAttribute('hidden','');
-      btn.setAttribute('aria-expanded','false');
+      drawer.setAttribute('hidden', '');
+      btn.setAttribute('aria-expanded', 'false');
     }
   });
-})();
+}
 
-// ----- Existing code you already have (year, not-yet-ready notice) -----
-document.addEventListener('DOMContentLoaded', () => {
-  const y = document.getElementById('y');
-  if (y) y.textContent = new Date().getFullYear();
+// ==============================
+// EXPANDABLE CARDS
+// ==============================
+function initExpandableCards() {
+  document.addEventListener('click', (e) => {
+    const toggleBtn = e.target.closest('[data-toggle]');
+    if (!toggleBtn) return;
+    
+    const card = toggleBtn.closest('[data-expand]');
+    if (!card) return;
+    
+    // Find the expandable content div (either hidden or visible)
+    const expandableContent = card.querySelector('div.muted');
+    if (!expandableContent) return;
+    
+    // Toggle the hidden state
+    expandableContent.hidden = !expandableContent.hidden;
+    
+    // Update button text and classes based on current state
+    if (expandableContent.hidden) {
+      toggleBtn.textContent = 'Read more';
+      toggleBtn.classList.remove('expanded');
+      card.classList.remove('expanded');
+    } else {
+      toggleBtn.textContent = 'Hide';
+      toggleBtn.classList.add('expanded');
+      card.classList.add('expanded');
+    }
+  });
+}
+
+// ==============================
+// NOT READY NOTICES
+// ==============================
+function initNotReadyNotices() {
   const notReady = () => {
     const box = document.getElementById('notReady');
     if (!box) return;
     box.hidden = false;
     box.scrollIntoView({ behavior: 'smooth', block: 'center' });
   };
-  ['loginBtn','signupBtn','signupBtn2','signupBtn3','loginBtn_m','signupBtn_m'].forEach(id=>{
+
+  // Add click listeners to all login/signup buttons
+  ['loginBtn', 'signupBtn', 'signupBtn2', 'signupBtn3', 'loginBtn_m', 'signupBtn_m'].forEach(id => {
     const el = document.getElementById(id);
     if (el) el.addEventListener('click', notReady);
   });
-});
+}
