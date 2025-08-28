@@ -20,7 +20,55 @@
 <body>
   <header class="nav">
     <div class="container nav-inner">
-      <a class="brand" href="index.html"><img src="assets/logo.svg" alt="KeepsVault" /><span>KeepsVault</span></a>
+      <a class="brand" href="index.html" aria-label="KeepsVault home">
+        <img src="assets/logo.svg" alt="KeepsVault logo" />
+        <span>KeepsVault</span>
+      </a>
+
+      <!-- Mobile menu button -->
+      <button class="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="menuDrawer">
+        <!-- simple burger -->
+        <span></span><span></span><span></span>
+      </button>
+
+      <!-- Desktop actions -->
+      <nav class="nav-right">
+        <div class="nav-links">
+          <a class="pill" href="index.html#features">Features</a>
+          <a class="pill" href="index.html#pricing">Pricing</a>
+          <a class="pill" href="index.html#about">About</a>
+          <a class="pill" href="creator.html">Story</a>
+          <a class="pill" href="index.html#help">Help</a>
+          <a class="pill" href="index.html#contact">Contact</a>
+        </div>
+        <button class="btn btn-ghost" id="loginBtn">Login</button>
+        <button class="btn btn-primary" id="signupBtn">Sign up</button>
+        <select id="themeSwitch" class="btn" aria-label="Change colour theme">
+          <option value="">Blue</option>
+          <option value="theme-amber">Amber</option>
+          <option value="theme-emerald">Emerald</option>
+        </select>
+      </nav>
+    </div>
+
+    <!-- Mobile drawer (hidden on desktop) -->
+    <div id="menuDrawer" class="menu-drawer" hidden>
+      <a class="pill" href="index.html#features">Features</a>
+      <a class="pill" href="index.html#pricing">Pricing</a>
+      <a class="pill" href="index.html#about">About</a>
+      <a class="pill" href="creator.html">Story</a>
+      <a class="pill" href="index.html#help">Help</a>
+      <a class="pill" href="index.html#contact">Contact</a>
+      <div class="row" style="margin-top:.75rem;">
+        <button class="btn btn-ghost" id="loginBtn_m">Login</button>
+        <button class="btn btn-primary" id="signupBtn_m">Sign up</button>
+      </div>
+      <label class="label" style="margin-top:.75rem;">Theme</label>
+      <select id="themeSwitch_m" class="btn" aria-label="Change colour theme (mobile)">
+        <option value="">Blue</option>
+        <option value="theme-amber">Amber</option>
+        <option value="theme-emerald">Emerald</option>
+      </select>
     </div>
   </header>
 
