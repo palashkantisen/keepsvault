@@ -4,6 +4,9 @@
 :root{
   --bg:#0b0c0f; --bg-elev:#111318; --surface:#171a21; --text:#e8eaed; --muted:#a8b0bd;
   --card:#151922; --border:#232837;
+}
+/* Default blue theme */
+:root, .theme-blue {
   --brand:#3b82f6; --brand-600:#2563eb; --brand-700:#1d4ed8;
   --brand-25a:rgba(59,130,246,0.25); --ring:rgba(59,130,246,0.35);
   --brand-bg:rgba(59,130,246,0.07);
@@ -226,9 +229,32 @@ footer{ border-top:1px solid var(--border); padding:2rem 0; color:var(--muted); 
 
 /* Drawer */
 .menu-drawer{
-  border-top:1px solid var(--border);
-  background:linear-gradient(180deg,var(--surface),var(--card));
-  padding: .75rem;
+  position: relative;
+  border: 1px solid var(--brand);
+  border-top: none;
+  background: var(--surface);
+  padding: 1.25rem;
+  margin: 0 8px;
+  border-radius: 0 0 16px 16px;
+  /* Solid background with brand-colored glow */
+  box-shadow: 
+    0 8px 24px rgba(0,0,0,0.5),
+    0 0 20px var(--brand-25a),
+    inset 0 1px 2px rgba(255,255,255,0.05);
+}
+
+/* Add subtle gradient overlay */
+.menu-drawer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    var(--surface) 0%,
+    var(--card) 100%
+  );
+  border-radius: 0 0 16px 16px;
+  z-index: -1;
 }
 .menu-drawer .pill{ display:inline-block; margin:.25rem .25rem .25rem 0; }
 .menu-drawer .btn{ width:100%; }

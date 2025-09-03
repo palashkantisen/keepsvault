@@ -22,12 +22,16 @@ document.addEventListener('DOMContentLoaded', () => {
 // ==============================
 // THEME HANDLING
 // ==============================
-const THEMES = ['theme-blue', 'theme-emerald'];
+const THEMES = ['theme-blue', 'theme-amber', 'theme-emerald'];
 
 function applyTheme(val) {
   const el = document.documentElement; // apply class on <html>
+  // First remove all themes
   THEMES.forEach(c => el.classList.remove(c));
-  if (val) el.classList.add(val);
+  // Add the new theme if it's not the default blue
+  if (val && val !== 'theme-blue') {
+    el.classList.add(val);
+  }
 }
 
 function initTheme() {
