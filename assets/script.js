@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // ==============================
 // THEME HANDLING
 // ==============================
-const THEMES = ['theme-blue', 'theme-amber', 'theme-emerald'];
+const THEMES = ['theme-blue', 'theme-amber', 'theme-emerald', 'theme-light'];
 
 function applyTheme(val) {
   const el = document.documentElement; // apply class on <html>
@@ -104,6 +104,13 @@ function initMobileMenu() {
   // Close on resize back to desktop
   window.addEventListener('resize', () => {
     if (window.innerWidth > 820) {
+      drawer.setAttribute('hidden', '');
+      btn.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!drawer.contains(e.target) && !btn.contains(e.target)) {
       drawer.setAttribute('hidden', '');
       btn.setAttribute('aria-expanded', 'false');
     }
