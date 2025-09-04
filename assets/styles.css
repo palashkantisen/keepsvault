@@ -89,6 +89,9 @@ a:hover{ text-decoration:underline; }
   background:linear-gradient(180deg, var(--surface), var(--card));
   border-radius:16px;
 }
+.card {
+  margin-bottom: 1.5rem; /* Add margin between cards */
+}
 
 /* ------------------------------
    NAVBAR
