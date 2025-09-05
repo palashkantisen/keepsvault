@@ -53,7 +53,79 @@ function initExpandableCards() {
   });
 }
 
-// Call the function to initialize
-initExpandableCards();
+// Initialize theme
+function initTheme() {
+  const THEMES = ['theme-blue', 'theme-amber', 'theme-emerald', 'theme-light'];
+  const el = document.documentElement;
+  const savedTheme = localStorage.getItem('kv-theme') || 'theme-blue';
+  THEMES.forEach(c => el.classList.remove(c));
+  el.classList.add(savedTheme);
+
+  const selectDesktop = document.getElementById('themeSwitch');
+  const selectMobile = document.getElementById('themeSwitch_m');
+
+  if (selectDesktop) selectDesktop.value = savedTheme;
+  if (selectMobile) selectMobile.value = savedTheme;
+
+  const onChange = (e) => {
+    const val = e.target.value;
+    THEMES.forEach(c => el.classList.remove(c));
+    el.classList.add(val);
+    localStorage.setItem('kv-theme', val);
+    if (selectDesktop) selectDesktop.value = val;
+    if (selectMobile) selectMobile.value = val;
+  };
+
+  if (selectDesktop) selectDesktop.addEventListener('change', onChange);
+  if (selectMobile) selectMobile.addEventListener('change', onChange);
+}
+
+// Initialize mobile menu
+function initMobileMenu() {
+  const btn = document.querySelector('.menu-btn');
+  const drawer = document.getElementById('menuDrawer');
+  if (!btn || !drawer) return;
+
+  const toggle = () => {
+    const isHidden = drawer.hasAttribute('hidden');
+    if (isHidden) {
+      drawer.removeAttribute('hidden');
+      btn.setAttribute('aria-expanded', 'true');
+    } else {
+      drawer.setAttribute('hidden', '');
+      btn.setAttribute('aria-expanded', 'false');
+    }
+  };
+
+  btn.addEventListener('click', toggle);
+
+  drawer.addEventListener('click', (e) => {
+    if (e.target.tagName === 'A' || e.target.closest('a')) {
+      drawer.setAttribute('hidden', '');
+      btn.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 820) {
+      drawer.setAttribute('hidden', '');
+      btn.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!drawer.contains(e.target) && !btn.contains(e.target)) {
+      drawer.setAttribute('hidden', '');
+      btn.setAttribute('aria-expanded', 'false');
+    }
+  });
+}
+
+// Call the functions to initialize
+document.addEventListener('DOMContentLoaded', () => {
+  initTheme();
+  initMobileMenu();
+  initExpandableCards();
+});
 
 // Other shared scripts can be added here
