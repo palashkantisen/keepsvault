@@ -80,29 +80,15 @@
     <div class="spacer"></div>
 
   </main>
-  <footer>
-    <div class="container">
-      <div class="row" style="justify-content:space-between;">
-        <div>© <span id="y"></span> KeepsVault</div>
-        <div class="row">
-          <a href="/">Home</a>
-          <span class="muted">·</span>
-          <a href="/#features">Features</a>
-          <span class="muted">·</span>
-          <a href="/#pricing">Pricing</a>
-          <span class="muted">·</span>
-          <a href="/privacy.html">Privacy</a>
-          <span class="muted">·</span>
-          <a href="/terms.html">Terms</a>
-          <span class="muted">·</span>
-          <a href="/security.html">Security</a>
-          <span class="muted">·</span>
-          <a href="/status.html">Status</a>
-          <span class="muted">·</span>
-          <a href="/#contact">Contact</a>
-        </div>
-      </div>
-    </div>
-  </footer>
+  <!-- Include footer -->
+<div id="footer-placeholder"></div>
+<script>
+  fetch('footer.html')
+    .then(response => response.text())
+    .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+</script>
+
+<!-- Include common scripts -->
+<script src="common.js"></script>
 </body>
 </html>
