@@ -272,6 +272,9 @@ footer{ border-top:1px solid var(--border); padding:2rem 0; color:var(--muted); 
   .nav-right { display:none; }        /* hide desktop actions */
   .menu-btn { display:flex; flex-direction:column; }
 }
+@media (min-width: 821px) {
+  .menu-btn { display: none; } /* hide mobile menu button in wide mode */
+}
 
 /* Drawer */
 .menu-drawer{
