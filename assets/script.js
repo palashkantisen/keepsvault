@@ -9,9 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
   // Initialize theme switchers
   initTheme();
   
-  // Initialize mobile menu
-  initMobileMenu();
-  
   // Initialize expandable cards
   initExpandableCards();
   
@@ -66,55 +63,6 @@ function initTheme() {
   } catch (e) {
     console.error('Theme init failed', e);
   }
-}
-
-// ==============================
-// MOBILE MENU
-// ==============================
-function initMobileMenu() {
-  const btn = document.querySelector('.menu-btn');
-  const drawer = document.getElementById('menuDrawer');
-  
-  if (!btn || !drawer) return;
-
-  const toggle = () => {
-    const isHidden = drawer.hasAttribute('hidden');
-    
-    if (isHidden) {
-      // Open menu
-      drawer.removeAttribute('hidden');
-      btn.setAttribute('aria-expanded', 'true');
-    } else {
-      // Close menu
-      drawer.setAttribute('hidden', '');
-      btn.setAttribute('aria-expanded', 'false');
-    }
-  };
-
-  btn.addEventListener('click', toggle);
-
-  // Close drawer when clicking a link (better UX)
-  drawer.addEventListener('click', (e) => {
-    if (e.target.tagName === 'A' || e.target.closest('a')) {
-      drawer.setAttribute('hidden', '');
-      btn.setAttribute('aria-expanded', 'false');
-    }
-  });
-
-  // Close on resize back to desktop
-  window.addEventListener('resize', () => {
-    if (window.innerWidth > 820) {
-      drawer.setAttribute('hidden', '');
-      btn.setAttribute('aria-expanded', 'false');
-    }
-  });
-
-  document.addEventListener('click', (e) => {
-    if (!drawer.contains(e.target) && !btn.contains(e.target)) {
-      drawer.setAttribute('hidden', '');
-      btn.setAttribute('aria-expanded', 'false');
-    }
-  });
 }
 
 // ==============================
