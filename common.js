@@ -24,7 +24,58 @@ if (lastUpdatedPrivacy) lastUpdatedPrivacy.textContent = LAST_UPDATED_PRIVACY;
 if (lastUpdatedTerms) lastUpdatedTerms.textContent = LAST_UPDATED_TERMS;
 if (mfaPlanned) mfaPlanned.textContent = MFA_PLANNED_DATE;
 
-// Initialize expandable cards
+// ==============================
+// THEME HANDLING
+// ==============================
+const THEMES = ['theme-blue', 'theme-amber', 'theme-emerald', 'theme-light'];
+
+function applyTheme(val) {
+  const el = document.documentElement; // apply class on <html>
+  // First remove all themes
+  THEMES.forEach(c => el.classList.remove(c));
+  // Add the new theme if it's not the default blue
+  if (val && val !== 'theme-blue') {
+    el.classList.add(val);
+  }
+}
+
+function initTheme() {
+  try {
+    const saved = localStorage.getItem('kv-theme') || '';
+    if (saved) applyTheme(saved);
+
+    // Get both theme selectors (desktop and mobile)
+    const selectDesktop = document.getElementById('themeSwitch');
+    const selectMobile = document.getElementById('themeSwitch_m');
+
+    // Set initial values
+    if (saved) {
+      if (selectDesktop) selectDesktop.value = saved;
+      if (selectMobile) selectMobile.value = saved;
+    }
+
+    // Add change listeners
+    const onChange = (e) => {
+      const val = e.target.value;
+      applyTheme(val);
+      localStorage.setItem('kv-theme', val);
+      
+      // Keep both selects in sync
+      const otherId = e.target.id === 'themeSwitch' ? 'themeSwitch_m' : 'themeSwitch';
+      const other = document.getElementById(otherId);
+      if (other) other.value = val;
+    };
+
+    if (selectDesktop) selectDesktop.addEventListener('change', onChange);
+    if (selectMobile) selectMobile.addEventListener('change', onChange);
+  } catch (e) {
+    console.error('Theme init failed', e);
+  }
+}
+
+// ==============================
+// EXPANDABLE CARDS
+// ==============================
 function initExpandableCards() {
   document.addEventListener('click', (e) => {
     const toggleBtn = e.target.closest('[data-toggle]');
@@ -51,33 +102,6 @@ function initExpandableCards() {
       card.classList.add('expanded');
     }
   });
-}
-
-// Initialize theme
-function initTheme() {
-  const THEMES = ['theme-blue', 'theme-amber', 'theme-emerald', 'theme-light'];
-  const el = document.documentElement;
-  const savedTheme = localStorage.getItem('kv-theme') || 'theme-blue';
-  THEMES.forEach(c => el.classList.remove(c));
-  el.classList.add(savedTheme);
-
-  const selectDesktop = document.getElementById('themeSwitch');
-  const selectMobile = document.getElementById('themeSwitch_m');
-
-  if (selectDesktop) selectDesktop.value = savedTheme;
-  if (selectMobile) selectMobile.value = savedTheme;
-
-  const onChange = (e) => {
-    const val = e.target.value;
-    THEMES.forEach(c => el.classList.remove(c));
-    el.classList.add(val);
-    localStorage.setItem('kv-theme', val);
-    if (selectDesktop) selectDesktop.value = val;
-    if (selectMobile) selectMobile.value = val;
-  };
-
-  if (selectDesktop) selectDesktop.addEventListener('change', onChange);
-  if (selectMobile) selectMobile.addEventListener('change', onChange);
 }
 
 // Initialize mobile menu
@@ -123,8 +147,13 @@ function initMobileMenu() {
 
 // Call the functions to initialize
 document.addEventListener('DOMContentLoaded', () => {
-  initTheme();
-  initMobileMenu();
+  fetch('header.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('header-placeholder').innerHTML = data;
+      initMobileMenu();
+      initTheme(); // Reinitialize theme here
+    });
   initExpandableCards();
 });
 
