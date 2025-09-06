@@ -6,47 +6,41 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="icon" href="assets/favicon.svg">
   <link rel="stylesheet" href="assets/styles.css" />
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('kv-theme');
+        if (t) { document.documentElement.classList.add(t); }
+      } catch (e) {}
+    })();
+  </script>
 </head>
 <body>
-  <!-- Header -->
   <div id="header-placeholder"></div>
   <script>
     fetch('header.html')
-      .then(r => r.text())
-      .then(html => { document.getElementById('header-placeholder').innerHTML = html; });
+      .then(response => response.text())
+      .then(data => document.getElementById('header-placeholder').innerHTML = data);
   </script>
-
-  <main class="wrap">
+  <main class="container">
     <h1>Join the KeepsVault Waitlist</h1>
     <p>Enter your details. We’ll email you when early access opens.</p>
-
-    <!-- Mirror Contact form structure: class="card", form-grid, target="_blank" -->
     <form class="card"
       action="https://docs.google.com/forms/d/e/1FAIpQLSd2aeVc68U_L0JYisY5bSD4QSj8ipD48XqOcpcoI-oMPT_elw/formResponse"
       method="POST" target="_blank">
-
       <div class="form-grid">
-        <!-- Full Name (entry.1132170388) -->
         <label class="label" for="g-name">Full Name *</label>
         <input id="g-name" class="input" name="entry.1132170388" placeholder="Your name" required />
-
-        <!-- Email (entry.706857230) -->
         <label class="label" for="g-email">Email Address *</label>
         <input id="g-email" class="input" type="email" name="entry.706857230" placeholder="you@example.com" required />
-
-        <!-- Preferred Plan (entry.996036042) — use radios to match Google Form multiple-choice -->
         <span class="label">Preferred Plan *</span>
         <div>
           <label style="margin-right:16px;"><input type="radio" name="entry.996036042" value="Free" required> Free</label>
           <label style="margin-right:16px;"><input type="radio" name="entry.996036042" value="Premium"> Premium</label>
           <label><input type="radio" name="entry.996036042" value="Not Sure Yet"> Not Sure Yet</label>
         </div>
-
-        <!-- Usage (entry.1147770350) -->
         <label class="label" for="g-usage">How do you plan to use KeepsVault?</label>
         <textarea id="g-usage" class="textarea" name="entry.1147770350" placeholder="Your answer"></textarea>
-
-        <!-- Country (entry.784216711) -->
         <label class="label" for="g-country">Country</label>
         <select id="g-country" class="input" name="entry.784216711">
           <option value="Afghanistan">Afghanistan</option>
@@ -244,32 +238,26 @@
           <option value="Zambia">Zambia</option>
           <option value="Zimbabwe">Zimbabwe</option>
         </select>
-
-        <!-- Submit -->
         <div></div>
         <button class="btn btn-primary" type="submit">Join Waitlist</button>
       </div>
     </form>
-
     <p class="muted" style="margin-top:12px;">
       If this doesn’t submit for any reason, <a
         href="https://docs.google.com/forms/d/e/1FAIpQLSd2aeVc68U_L0JYisY5bSD4QSj8ipD48XqOcpcoI-oMPT_elw/viewform?usp=header"
         target="_blank" rel="noopener">open the Google Form</a>.
     </p>
   </main>
-
-  <!-- Footer -->
   <div id="footer-placeholder"></div>
   <script>
     fetch('footer.html')
-      .then(r => r.text())
-      .then(html => {
-        document.getElementById('footer-placeholder').innerHTML = html;
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer-placeholder').innerHTML = data;
         const y = document.getElementById('y');
         if (y) y.textContent = new Date().getFullYear();
       });
   </script>
-
   <script src="common.js"></script>
 </body>
 </html>
