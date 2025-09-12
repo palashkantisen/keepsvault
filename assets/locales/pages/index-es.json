@@ -1,0 +1,212 @@
+{
+  "meta": {
+    "title": "KeepsVault – Mantén seguros los documentos de la vida",
+    "description": "Crea, organiza y comparte tarjetas y pilas. Tus datos siguen siendo tuyos."
+  },
+  "hero": {
+    "kicker": "Nunca pierdas documentos importantes otra vez",
+    "title": "Organiza los detalles de la vida en un<br/>lugar seguro",
+    "subtitle": "Mantén pasaportes, registros médicos y fechas importantes organizados. Comparte de forma segura con familia y profesionales. Tus datos permanecen seguros y privados.",
+    "tryFree": "Pruébalo gratis",
+    "seeHow": "Ver cómo funciona",
+    "privacyFirst": "Privacidad primero",
+    "simpleToUse": "Fácil de usar",
+    "worksAnywhere": "Funciona en cualquier lugar"
+  },
+  "howItWorks": {
+    "title": "Cómo funciona",
+    "step1": {
+      "title": "Crear",
+      "description": "Añade tu pasaporte, registros médicos o cualquier documento importante como una tarjeta."
+    },
+    "step2": {
+      "title": "Organizar",
+      "description": "Agrupa tarjetas relacionadas en pilas como \"Salud\", \"Viaje\" o \"Familia\"."
+    },
+    "step3": {
+      "title": "Compartir y mantenerse seguro",
+      "description": "Comparte con familia o profesionales. Elige quién puede ver o editar."
+    }
+  },
+  "features": {
+    "title": "Características",
+    "cardsStacks": {
+      "title": "Tarjetas y pilas",
+      "description": "Organiza documentos, fechas y contactos en grupos lógicos.",
+      "readMore": "Leer más",
+      "details": [
+        "Crea tarjetas para pasaportes, registros médicos, contactos",
+        "Agrupa en pilas como \"Salud\", \"Viaje\", \"Familia\"",
+        "Arrastra y suelta para reordenar (app móvil)"
+      ]
+    },
+    "secureSharing": {
+      "title": "Compartir seguro",
+      "description": "Comparte solo lo necesario, con acceso claro.",
+      "readMore": "Leer más",
+      "details": [
+        "Comparte una sola tarjeta o toda una pila",
+        "Acceso de vista o edición",
+        "Deja de compartir en cualquier momento"
+      ]
+    },
+    "filesNotes": {
+      "title": "Archivos y notas",
+      "description": "Sube pasaportes, registros médicos y añade notas importantes.",
+      "readMore": "Leer más",
+      "details": [
+        "Subidas de PDF, imágenes y documentos",
+        "Añade notas y fechas importantes",
+        "Búsqueda rápida en todas tus tarjetas"
+      ]
+    },
+    "smartReminders": {
+      "title": "Recordatorios inteligentes",
+      "description": "Nunca pierdas renovaciones de pasaporte o citas médicas.",
+      "readMore": "Leer más",
+      "details": [
+        "Alertas por email para fechas importantes",
+        "Posponer recordatorios por semana o mes",
+        "Exportar calendario de fechas próximas"
+      ]
+    },
+    "worksAnywhere": {
+      "title": "Funciona en cualquier lugar",
+      "description": "Basado en web y listo para móvil.",
+      "readMore": "Leer más",
+      "details": [
+        "No se necesita instalación",
+        "Diseño responsivo",
+        "Carga rápida"
+      ]
+    },
+    "privacyByDesign": {
+      "title": "Privacidad por diseño",
+      "description": "Tú decides quién ve qué.",
+      "readMore": "Leer más",
+      "details": [
+        "Controles de acceso claros",
+        "Recopilación limitada de datos",
+        "Cumplimiento GDPR y privacidad global"
+      ]
+    }
+  },
+  "whyKeepsVault": {
+    "title": "Por qué KeepsVault",
+    "privacy": {
+      "title": "Privacidad",
+      "description": "Tú eliges quién ve tus tarjetas.",
+      "readMore": "Leer más",
+      "details": [
+        "Sin compartir por defecto. Tú lo controlas."
+      ]
+    },
+    "security": {
+      "title": "Seguridad",
+      "description": "Protecciones fuertes para datos y archivos.",
+      "readMore": "Leer más",
+      "details": [
+        "Cifrado en reposo y en tránsito",
+        "Copias de seguridad y monitoreo",
+        "Control de acceso en la aplicación"
+      ]
+    },
+    "simplicity": {
+      "title": "Simplicidad",
+      "description": "Rápido de configurar. Fácil de mantener actualizado.",
+      "readMore": "Leer más",
+      "details": [
+        "Lenguaje claro, interfaz limpia"
+      ]
+    }
+  },
+  "dataProtection": {
+    "title": "Cómo protegemos tus datos",
+    "details": [
+      "Cifrado en tránsito (HTTPS/TLS) y en reposo.",
+      "Copias de seguridad con pruebas de restauración regulares.",
+      "Acceso de menor privilegio para personal y sistemas."
+    ],
+    "learnMore": "Saber más"
+  },
+  "testimonials": {
+    "title": "Personas usando KeepsVault",
+    "testimonial1": {
+      "text": "Un lugar para pasaportes, garantías y cosas de salud.",
+      "author": "— Un padre"
+    },
+    "testimonial2": {
+      "text": "Compartimos nuestro plan de emergencia con la familia en minutos.",
+      "author": "— Una pareja"
+    },
+    "testimonial3": {
+      "text": "Simple para que Mamá use. Mantenemos las cosas actualizadas.",
+      "author": "— Hijo adulto"
+    }
+  },
+  "pricing": {
+    "title": "Precios",
+    "free": {
+      "title": "Gratis",
+      "description": "Bueno para empezar.",
+      "price": "$0",
+      "features": [
+        "Un solo árbol con 10 entradas",
+        "Acceso ilimitado para elementos compartidos"
+      ],
+      "button": "Comenzar"
+    },
+    "premium": {
+      "title": "Premium",
+      "description": "Para uso completo.",
+      "price": "$10 USD/mes",
+      "features": [
+        "Árboles y entradas ilimitados",
+        "Compartir con control de acceso",
+        "Subidas de archivos",
+        "Alertas y recordatorios"
+      ],
+      "button": "Ir Premium"
+    }
+  },
+  "about": {
+    "title": "Acerca de",
+    "description": "KeepsVault hace fácil mantener cosas importantes en un lugar y compartir de forma segura con familia y profesionales en todo el mundo. Es simple de usar, con controles claros para privacidad y acceso. Nuestro enfoque es la confianza, seguridad y hacer la vida más fácil para todos."
+  },
+  "help": {
+    "title": "Ayuda / FAQ",
+    "whatIsCard": {
+      "question": "¿Qué es una \"tarjeta\"?",
+      "answer": "Una tarjeta es un elemento. Puede ser una nota, un archivo, una fecha o una persona. Puedes agrupar tarjetas en pilas."
+    },
+    "howToShare": {
+      "question": "¿Cómo comparto?",
+      "answer": "Abre una tarjeta o pila y elige con quién compartir. Elige ver o editar."
+    },
+    "canOthersEdit": {
+      "question": "¿Pueden otros editar?",
+      "answer": "Solo si das acceso de edición. Puedes cambiar esto en cualquier momento."
+    },
+    "isInfoSafe": {
+      "question": "¿Mi información está segura?",
+      "answer": "Usamos controles de seguridad y privacidad fuertes. Tus datos siguen siendo tuyos."
+    }
+  },
+  "contact": {
+    "title": "Contacto",
+    "form": {
+      "name": "Nombre",
+      "namePlaceholder": "Tu nombre",
+      "email": "Email",
+      "emailPlaceholder": "tu@ejemplo.com",
+      "message": "Mensaje",
+      "messagePlaceholder": "Hola, me gustaría saber...",
+      "send": "Enviar"
+    },
+    "otherWays": {
+      "title": "Otras formas",
+      "email": "Email: palashkantisen@gmail.com",
+      "responseTime": "Nos esforzamos por responder en 2 días laborables."
+    }
+  }
+}

@@ -39,20 +39,20 @@
     <!-- HERO -->
     <section class="hero">
       <div class="hero-left">
-        <div class="kicker">Never lose important documents again</div>
-        <h1>Organize life's details in one<br/>secure place</h1>
-        <p class="muted">Keep passports, medical records, and important dates organized. Share safely with family and professionals. Your data stays secure and private.</p>
+        <div class="kicker" id="hero-kicker">Never lose important documents again</div>
+        <h1 id="hero-title">Organize life's details in one<br/>secure place</h1>
+        <p class="muted" id="hero-subtitle">Keep passports, medical records, and important dates organized. Share safely with family and professionals. Your data stays secure and private.</p>
 
         <div class="row" style="margin-top:1rem;">
-          <a class="btn btn-primary" href="waitlist.html">Try it free</a>
-          <a class="btn" href="#how">See how it works</a>
+          <a class="btn btn-primary" href="waitlist.html" id="hero-try-free">Try it free</a>
+          <a class="btn" href="#how" id="hero-see-how">See how it works</a>
         </div>
 
         <div class="spacer"></div>
         <div class="row muted">
-          <span class="bar-tag">Privacy first</span>
-          <span class="bar-tag">Simple to use</span>
-          <span class="bar-tag">Works anywhere</span>
+          <span class="bar-tag" id="bar-privacy">Privacy first</span>
+          <span class="bar-tag" id="bar-simple">Simple to use</span>
+          <span class="bar-tag" id="bar-works">Works anywhere</span>
         </div>
 
         <!-- Cards demo -->
@@ -86,27 +86,27 @@
 
     <!-- HOW IT WORKS -->
     <section id="how" class="section">
-      <h2>How it works</h2>
+      <h2 id="how-title">How it works</h2>
       <div class="grid grid-3" style="margin-top:1rem;">
         <div class="card step">
           <div class="n">1</div>
           <div>
-            <h3>Create</h3>
-            <p class="muted">Add your passport, medical records, or any important document as a card.</p>
+            <h3 id="step1-title">Create</h3>
+            <p class="muted" id="step1-desc">Add your passport, medical records, or any important document as a card.</p>
           </div>
         </div>
         <div class="card step">
           <div class="n">2</div>
           <div>
-            <h3>Organize</h3>
-            <p class="muted">Group related cards into stacks like "Health", "Travel", or "Family".</p>
+            <h3 id="step2-title">Organize</h3>
+            <p class="muted" id="step2-desc">Group related cards into stacks like "Health", "Travel", or "Family".</p>
           </div>
         </div>
         <div class="card step">
           <div class="n">3</div>
           <div>
-            <h3>Share & stay safe</h3>
-            <p class="muted">Share with family or professionals. Choose who can view or edit.</p>
+            <h3 id="step3-title">Share & stay safe</h3>
+            <p class="muted" id="step3-desc">Share with family or professionals. Choose who can view or edit.</p>
           </div>
         </div>
       </div>
@@ -114,14 +114,14 @@
 
     <!-- FEATURES (click to expand details) -->
     <section id="features" class="section">
-      <h2>Features</h2>
+      <h2 id="features-title">Features</h2>
       <div class="grid grid-3" style="margin-top:1rem;">
         <article class="card" data-expand>
-          <h3>Cards & stacks</h3>
-          <p class="muted">Organize documents, dates, and contacts into logical groups.</p>
-          <button class="btn btn-ghost" data-toggle>Read more</button>
+          <h3 id="feature-cards-title">Cards & stacks</h3>
+          <p class="muted" id="feature-cards-desc">Organize documents, dates, and contacts into logical groups.</p>
+          <button class="btn btn-ghost" data-toggle id="feature-cards-readmore">Read more</button>
           <div class="muted" hidden>
-            <ul>
+            <ul id="feature-cards-details">
               <li>Create cards for passports, medical records, contacts</li>
               <li>Group into stacks like "Health", "Travel", "Family"</li>
               <li>Drag and drop to reorder (mobile app)</li>
@@ -130,11 +130,11 @@
         </article>
 
         <article class="card" data-expand>
-          <h3>Secure sharing</h3>
-          <p class="muted">Share only what’s needed, with clear access.</p>
-          <button class="btn btn-ghost" data-toggle>Read more</button>
+          <h3 id="feature-sharing-title">Secure sharing</h3>
+          <p class="muted" id="feature-sharing-desc">Share only what's needed, with clear access.</p>
+          <button class="btn btn-ghost" data-toggle id="feature-sharing-readmore">Read more</button>
           <div class="muted" hidden>
-            <ul>
+            <ul id="feature-sharing-details">
               <li>Share a single card or a whole stack</li>
               <li>View or edit access</li>
               <li>Stop sharing any time</li>
@@ -143,11 +143,11 @@
         </article>
 
         <article class="card" data-expand>
-          <h3>Files & notes</h3>
-          <p class="muted">Upload passports, medical records, and add important notes.</p>
-          <button class="btn btn-ghost" data-toggle>Read more</button>
+          <h3 id="feature-files-title">Files & notes</h3>
+          <p class="muted" id="feature-files-desc">Upload passports, medical records, and add important notes.</p>
+          <button class="btn btn-ghost" data-toggle id="feature-files-readmore">Read more</button>
           <div class="muted" hidden>
-            <ul>
+            <ul id="feature-files-details">
               <li>PDF, image, and document uploads</li>
               <li>Add notes and important dates</li>
               <li>Quick search across all your cards</li>
@@ -156,11 +156,11 @@
         </article>
 
         <article class="card" data-expand>
-          <h3>Smart reminders</h3>
-          <p class="muted">Never miss passport renewals or medical appointments.</p>
-          <button class="btn btn-ghost" data-toggle>Read more</button>
+          <h3 id="feature-reminders-title">Smart reminders</h3>
+          <p class="muted" id="feature-reminders-desc">Never miss passport renewals or medical appointments.</p>
+          <button class="btn btn-ghost" data-toggle id="feature-reminders-readmore">Read more</button>
           <div class="muted" hidden>
-            <ul>
+            <ul id="feature-reminders-details">
               <li>Email alerts for important dates</li>
               <li>Snooze reminders by week or month</li>
               <li>Export calendar of upcoming dates</li>
@@ -169,11 +169,11 @@
         </article>
 
         <article class="card" data-expand>
-          <h3>Works anywhere</h3>
-          <p class="muted">Web-based and mobile-ready.</p>
-          <button class="btn btn-ghost" data-toggle>Read more</button>
+          <h3 id="feature-anywhere-title">Works anywhere</h3>
+          <p class="muted" id="feature-anywhere-desc">Web-based and mobile-ready.</p>
+          <button class="btn btn-ghost" data-toggle id="feature-anywhere-readmore">Read more</button>
           <div class="muted" hidden>
-            <ul>
+            <ul id="feature-anywhere-details">
               <li>No install needed</li>
               <li>Responsive layout</li>
               <li>Fast to load</li>
@@ -182,14 +182,14 @@
         </article>
 
         <article class="card" data-expand>
-          <h3>Privacy by design</h3>
-          <p class="muted">You decide who sees what.</p>
-          <button class="btn btn-ghost" data-toggle>Read more</button>
+          <h3 id="feature-privacy-title">Privacy by design</h3>
+          <p class="muted" id="feature-privacy-desc">You decide who sees what.</p>
+          <button class="btn btn-ghost" data-toggle id="feature-privacy-readmore">Read more</button>
           <div class="muted" hidden>
-            <ul>
+            <ul id="feature-privacy-details">
               <li>Clear access controls</li>
               <li>Limited data collection</li>
-                             <li>GDPR and global privacy compliant</li>
+              <li>GDPR and global privacy compliant</li>
             </ul>
           </div>
         </article>
@@ -198,22 +198,22 @@
 
     <!-- WHY -->
     <section class="section">
-      <h2>Why KeepsVault</h2>
+      <h2 id="why-title">Why KeepsVault</h2>
       <div class="grid grid-3" style="margin-top:1rem;">
         <article class="card" data-expand>
-          <h3>Privacy</h3>
-          <p class="muted">You choose who sees your cards.</p>
-          <button class="btn btn-ghost" data-toggle>Read more</button>
+          <h3 id="why-privacy-title">Privacy</h3>
+          <p class="muted" id="why-privacy-desc">You choose who sees your cards.</p>
+          <button class="btn btn-ghost" data-toggle id="why-privacy-readmore">Read more</button>
           <div class="muted" hidden>
-            <ul><li>No sharing by default. You control it.</li></ul>
+            <ul id="why-privacy-details"><li>No sharing by default. You control it.</li></ul>
           </div>
         </article>
         <article class="card" data-expand>
-          <h3>Security</h3>
-          <p class="muted">Strong protections for data and files.</p>
-          <button class="btn btn-ghost" data-toggle>Read more</button>
+          <h3 id="why-security-title">Security</h3>
+          <p class="muted" id="why-security-desc">Strong protections for data and files.</p>
+          <button class="btn btn-ghost" data-toggle id="why-security-readmore">Read more</button>
           <div class="muted" hidden>
-            <ul>
+            <ul id="why-security-details">
               <li>Encryption at rest and in transit</li>
               <li>Backups and monitoring</li>
               <li>Access control in the app</li>
@@ -221,11 +221,11 @@
           </div>
         </article>
         <article class="card" data-expand>
-          <h3>Simplicity</h3>
-          <p class="muted">Quick to set up. Easy to keep current.</p>
-          <button class="btn btn-ghost" data-toggle>Read more</button>
+          <h3 id="why-simplicity-title">Simplicity</h3>
+          <p class="muted" id="why-simplicity-desc">Quick to set up. Easy to keep current.</p>
+          <button class="btn btn-ghost" data-toggle id="why-simplicity-readmore">Read more</button>
           <div class="muted" hidden>
-            <ul><li>Plain language, clean UI</li></ul>
+            <ul id="why-simplicity-details"><li>Plain language, clean UI</li></ul>
           </div>
         </article>
       </div>
@@ -233,36 +233,36 @@
 
     <!-- HOW WE PROTECT YOUR DATA -->
     <section class="section">
-      <h2>How we protect your data</h2>
+      <h2 id="data-protection-title">How we protect your data</h2>
       <div class="card">
-        <ul class="muted">
+        <ul class="muted" id="data-protection-details">
           <li>Encryption in transit (HTTPS/TLS) and at rest.</li>
           <li>Backups with regular restore tests.</li>
           <li>Least-privilege access for staff and systems.</li>
         </ul>
-        <a href="security.html" class="btn">Learn more</a>
+        <a href="security.html" class="btn" id="data-protection-learn-more">Learn more</a>
       </div>
     </section>
 
     <!-- TESTIMONIALS -->
     <section class="section-compact">
-      <h2>People using KeepsVault</h2>
+      <h2 id="testimonials-title">People using KeepsVault</h2>
       <div class="grid grid-3" style="margin-top:1rem;">
-        <div class="card"><p>“One place for passports, warranties, and health stuff.”</p><p class="muted">— A parent</p></div>
-        <div class="card"><p>“Shared our emergency plan with family in minutes.”</p><p class="muted">— A couple</p></div>
-        <div class="card"><p>“Simple for Mum to use. We keep things up to date.”</p><p class="muted">— Adult child</p></div>
+        <div class="card"><p id="testimonial1-text">"One place for passports, warranties, and health stuff."</p><p class="muted" id="testimonial1-author">— A parent</p></div>
+        <div class="card"><p id="testimonial2-text">"Shared our emergency plan with family in minutes."</p><p class="muted" id="testimonial2-author">— A couple</p></div>
+        <div class="card"><p id="testimonial3-text">"Simple for Mum to use. We keep things up to date."</p><p class="muted" id="testimonial3-author">— Adult child</p></div>
       </div>
     </section>
 
     <!-- PRICING -->
     <section id="pricing" class="section">
-      <h2>Pricing</h2>
+      <h2 id="pricing-title">Pricing</h2>
       <div class="grid grid-2" style="margin-top:1rem;">
         <div class="card plan">
-          <h3>Free</h3>
-          <p class="muted">Good for starting out.</p>
-          <div class="price">$0</div>
-          <ul>
+          <h3 id="pricing-free-title">Free</h3>
+          <p class="muted" id="pricing-free-desc">Good for starting out.</p>
+          <div class="price" id="pricing-free-price">$0</div>
+          <ul id="pricing-free-features">
             <li><span class="tick"></span><span>Single tree with 10 entries</span></li>
             <li><span class="tick"></span><span>Unlimited access for shared items</span></li>
           </ul>
@@ -270,10 +270,10 @@
           <button class="btn" id="signupBtn2" onclick="location.href='waitlist.html'">Get started</button>
         </div>
         <div class="card plan">
-          <h3>Premium</h3>
-          <p class="muted">For full use.</p>
-          <div class="price">$10 USD<span style="font-size:1rem; font-weight:600;">/month</span></div>
-          <ul>
+          <h3 id="pricing-premium-title">Premium</h3>
+          <p class="muted" id="pricing-premium-desc">For full use.</p>
+          <div class="price" id="pricing-premium-price">$10 USD<span style="font-size:1rem; font-weight:600;">/month</span></div>
+          <ul id="pricing-premium-features">
             <li><span class="tick"></span><span>Unlimited trees & entries</span></li>
             <li><span class="tick"></span><span>Sharing with access control</span></li>
             <li><span class="tick"></span><span>File uploads</span></li>
@@ -287,30 +287,30 @@
 
     <!-- ABOUT -->
     <section id="about" class="section">
-      <h2>About</h2>
+      <h2 id="about-title">About</h2>
       <div class="card">
-        <p>KeepsVault makes it easy to keep important things in one place and share safely with family and professionals worldwide. It is simple to use, with clear controls for privacy and access. Our focus is trust, security, and making life easier for everyone.</p>
+        <p id="about-description">KeepsVault makes it easy to keep important things in one place and share safely with family and professionals worldwide. It is simple to use, with clear controls for privacy and access. Our focus is trust, security, and making life easier for everyone.</p>
       </div>
     </section>
 
     <!-- HELP / FAQ -->
     <section id="help" class="section">
-      <h2>Help / FAQ</h2>
+      <h2 id="help-title">Help / FAQ</h2>
       <details open>
-        <summary>What is a “card”?</summary>
-        <p class="muted">A card is one item. It can be a note, a file, a date, or a person. You can group cards into stacks.</p>
+        <summary id="help-what-is-card-q">What is a "card"?</summary>
+        <p class="muted" id="help-what-is-card-a">A card is one item. It can be a note, a file, a date, or a person. You can group cards into stacks.</p>
       </details>
       <details>
-        <summary>How do I share?</summary>
-        <p class="muted">Open a card or stack and choose who to share with. Pick view or edit.</p>
+        <summary id="help-how-to-share-q">How do I share?</summary>
+        <p class="muted" id="help-how-to-share-a">Open a card or stack and choose who to share with. Pick view or edit.</p>
       </details>
       <details>
-        <summary>Can others edit?</summary>
-        <p class="muted">Only if you give edit access. You can change this any time.</p>
+        <summary id="help-can-others-edit-q">Can others edit?</summary>
+        <p class="muted" id="help-can-others-edit-a">Only if you give edit access. You can change this any time.</p>
       </details>
       <details>
-        <summary>Is my info safe?</summary>
-        <p class="muted">We use strong security and privacy controls. Your data stays yours.</p>
+        <summary id="help-is-info-safe-q">Is my info safe?</summary>
+        <p class="muted" id="help-is-info-safe-a">We use strong security and privacy controls. Your data stays yours.</p>
       </details>
     </section>
 
@@ -321,30 +321,30 @@
 
     <!-- CONTACT -->
     <section id="contact" class="section">
-      <h2>Contact</h2>
+      <h2 id="contact-title">Contact</h2>
       <div class="grid grid-2" style="margin-top:1rem;">
         <form class="card"
           action="https://docs.google.com/forms/d/e/1FAIpQLSc_QXm45kU1FXEzifB0EBrh524mJoX4ADVWOTey-bBPyoZYcQ/formResponse"
           method="POST"
           target="_blank">
           <div class="form-grid">
-            <label class="label" for="g-name">Name</label>
+            <label class="label" for="g-name" id="contact-form-name-label">Name</label>
             <input id="g-name" class="input" name="entry.758747723" placeholder="Your name" required />
 
-            <label class="label" for="g-email">Email</label>
+            <label class="label" for="g-email" id="contact-form-email-label">Email</label>
             <input id="g-email" class="input" type="email" name="entry.915788050" placeholder="you@example.com" required />
 
-            <label class="label" for="g-msg">Message</label>
-            <textarea id="g-msg" class="textarea" name="entry.1522033606" placeholder="Kia ora, I’d like to know…" required></textarea>
+            <label class="label" for="g-msg" id="contact-form-message-label">Message</label>
+            <textarea id="g-msg" class="textarea" name="entry.1522033606" placeholder="Kia ora, I'd like to know…" required></textarea>
 
-            <button class="btn btn-primary" type="submit">Send</button>
+            <button class="btn btn-primary" type="submit" id="contact-form-send">Send</button>
           </div>
         </form>
 
         <div class="card">
-          <h3>Other ways</h3>
-          <p class="muted">Email: <a href="mailto:palashkantisen@gmail.com?subject=KeepsVault%20support%20request">palashkantisen@gmail.com</a></p>
-          <p class="muted">We aim to reply within 2 working days.</p>
+          <h3 id="contact-other-ways-title">Other ways</h3>
+          <p class="muted" id="contact-other-ways-email">Email: <a href="mailto:palashkantisen@gmail.com?subject=KeepsVault%20support%20request">palashkantisen@gmail.com</a></p>
+          <p class="muted" id="contact-other-ways-response">We aim to reply within 2 working days.</p>
         </div>
       </div>
     </section>
@@ -359,6 +359,8 @@
   </script>
 
   <!-- Include common scripts -->
+  <script src="assets/translation-shared.js"></script>
+  <script src="assets/translation-index.js"></script>
   <script src="common.js"></script>
 </body>
 </html>

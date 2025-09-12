@@ -1,0 +1,30 @@
+{
+  "navigation": {
+    "home": "Inicio",
+    "features": "Características",
+    "pricing": "Precios",
+    "about": "Acerca de",
+    "story": "Historia",
+    "privacy": "Privacidad",
+    "terms": "Términos",
+    "security": "Seguridad",
+    "status": "Estado",
+    "contact": "Contacto",
+    "waitlist": "Lista de espera",
+    "login": "Iniciar sesión"
+  },
+  "footer": {
+    "copyright": "© 2024 KeepsVault. Todos los derechos reservados.",
+    "madeWith": "Hecho con ❤️ en Nueva Zelanda",
+    "home": "Inicio",
+    "features": "Características",
+    "pricing": "Precios",
+    "about": "Acerca de",
+    "story": "Historia",
+    "privacy": "Privacidad",
+    "terms": "Términos",
+    "security": "Seguridad",
+    "status": "Estado",
+    "contact": "Contacto"
+  }
+}

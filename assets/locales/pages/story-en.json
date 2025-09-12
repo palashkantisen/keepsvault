@@ -1,0 +1,26 @@
+{
+  "meta": {
+    "title": "Our Story - KeepsVault",
+    "description": "Learn about the story behind KeepsVault and why we built it."
+  },
+  "story": {
+    "title": "Our Story",
+    "beginning": {
+      "title": "The Beginning",
+      "p1": "KeepsVault started with a simple problem: keeping important documents organized and accessible when you need them most.",
+      "p2": "After years of struggling with scattered files, forgotten passwords, and lost documents, we knew there had to be a better way.",
+      "p3": "We envisioned a secure, simple platform that would help people organize their most important information and share it safely with family and professionals."
+    },
+    "truth": {
+      "title": "The Truth About Document Management",
+      "p1": "Most people struggle with document organization because existing solutions are either too complex or not secure enough.",
+      "p2": "We believe that everyone deserves access to tools that make life easier, not harder.",
+      "list": [
+        "Documents should be easy to find when you need them",
+        "Sharing should be simple but secure",
+        "Your data should always remain yours",
+        "The interface should be intuitive for everyone"
+      ]
+    }
+  }
+}

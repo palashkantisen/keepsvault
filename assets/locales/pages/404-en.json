@@ -1,0 +1,13 @@
+{
+  "meta": {
+    "title": "Page Not Found - KeepsVault",
+    "description": "The page you're looking for doesn't exist. Return to KeepsVault home."
+  },
+  "error404": {
+    "title": "404 - Page Not Found",
+    "subtitle": "Oops! This page doesn't exist",
+    "description": "The page you're looking for might have been moved, deleted, or doesn't exist.",
+    "homeButton": "Go Home",
+    "backButton": "Go Back"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "meta": {
+    "title": "System Status - KeepsVault",
+    "description": "Check the current status of KeepsVault services and systems."
+  },
+  "status": {
+    "title": "System Status",
+    "subtitle": "Real-time status of all KeepsVault services",
+    "overall": {
+      "title": "Overall Status",
+      "status": "All Systems Operational",
+      "description": "All services are running normally with no known issues."
+    },
+    "api": {
+      "title": "API Services",
+      "status": "Operational",
+      "description": "All API endpoints are responding normally."
+    },
+    "database": {
+      "title": "Database",
+      "status": "Operational",
+      "description": "Database services are running smoothly with no performance issues."
+    }
+  }
+}

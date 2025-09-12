@@ -1,0 +1,27 @@
+{
+  "meta": {
+    "title": "Seguridad - KeepsVault",
+    "description": "Aprende sobre las medidas de seguridad y protección de datos de KeepsVault."
+  },
+  "security": {
+    "title": "Seguridad",
+    "lastUpdated": "Última actualización: Enero 2024",
+    "intro": "Nos tomamos la seguridad en serio. Así es como protegemos tus datos y mantenemos los más altos estándares de seguridad.",
+    "encryption": {
+      "title": "Cifrado de Extremo a Extremo",
+      "description": "Todos tus datos están cifrados tanto en tránsito como en reposo usando protocolos de cifrado estándar de la industria."
+    },
+    "access": {
+      "title": "Controles de Acceso",
+      "description": "Implementamos controles de acceso estrictos y autenticación multifactor para proteger tu cuenta."
+    },
+    "monitoring": {
+      "title": "Monitoreo de Seguridad",
+      "description": "Nuestros sistemas están continuamente monitoreados para detectar actividad sospechosa y posibles amenazas de seguridad."
+    },
+    "compliance": {
+      "title": "Cumplimiento y Estándares",
+      "description": "Seguimos las mejores prácticas de la industria y cumplimos con estándares de seguridad internacionales incluyendo GDPR y SOC 2."
+    }
+  }
+}

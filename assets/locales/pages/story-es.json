@@ -1,0 +1,26 @@
+{
+  "meta": {
+    "title": "Nuestra Historia - KeepsVault",
+    "description": "Conoce la historia detrás de KeepsVault y por qué lo construimos."
+  },
+  "story": {
+    "title": "Nuestra Historia",
+    "beginning": {
+      "title": "El Comienzo",
+      "p1": "KeepsVault comenzó con un problema simple: mantener documentos importantes organizados y accesibles cuando más los necesitas.",
+      "p2": "Después de años luchando con archivos dispersos, contraseñas olvidadas y documentos perdidos, sabíamos que tenía que haber una mejor manera.",
+      "p3": "Imaginamos una plataforma segura y simple que ayudaría a las personas a organizar su información más importante y compartirla de forma segura con familia y profesionales."
+    },
+    "truth": {
+      "title": "La Verdad Sobre la Gestión de Documentos",
+      "p1": "La mayoría de las personas luchan con la organización de documentos porque las soluciones existentes son demasiado complejas o no lo suficientemente seguras.",
+      "p2": "Creemos que todos merecen acceso a herramientas que hagan la vida más fácil, no más difícil.",
+      "list": [
+        "Los documentos deberían ser fáciles de encontrar cuando los necesitas",
+        "Compartir debería ser simple pero seguro",
+        "Tus datos siempre deben seguir siendo tuyos",
+        "La interfaz debería ser intuitiva para todos"
+      ]
+    }
+  }
+}

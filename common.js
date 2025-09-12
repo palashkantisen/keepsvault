@@ -153,6 +153,10 @@ document.addEventListener('DOMContentLoaded', () => {
       document.getElementById('header-placeholder').innerHTML = data;
       initMobileMenu();
       initTheme(); // Reinitialize theme here
+      // Initialize language after header is loaded
+      if (window.initLanguage) {
+        window.initLanguage();
+      }
     });
   initExpandableCards();
 });

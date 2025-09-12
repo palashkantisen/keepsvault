@@ -1,0 +1,55 @@
+{
+  "meta": {
+    "title": "Privacy Policy - KeepsVault",
+    "description": "Learn how KeepsVault protects your privacy and handles your data."
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "lastUpdated": "Last updated: January 2024",
+    "intro": "This privacy policy explains how KeepsVault collects, uses, and protects your information.",
+    "infoWeCollect": {
+      "title": "Information We Collect",
+      "description": "We collect only the information necessary to provide our service:",
+      "list": [
+        "Account information (email, name)",
+        "Cards and stacks you create",
+        "Files you upload",
+        "Usage data to improve our service"
+      ]
+    },
+    "howWeUse": {
+      "title": "How We Use Your Information",
+      "description": "We use your information to:",
+      "list": [
+        "Provide and maintain our service",
+        "Process your requests",
+        "Send important notifications",
+        "Improve our service"
+      ]
+    },
+    "dataSecurity": {
+      "title": "Data Security",
+      "description": "We protect your data with:",
+      "list": [
+        "End-to-end encryption",
+        "Secure data centers",
+        "Regular security audits",
+        "Access controls"
+      ]
+    },
+    "yourRights": {
+      "title": "Your Rights",
+      "description": "You have the right to:",
+      "list": [
+        "Access your data",
+        "Correct inaccurate information",
+        "Delete your account",
+        "Export your data"
+      ]
+    },
+    "contactUs": {
+      "title": "Contact Us",
+      "description": "If you have questions about this privacy policy, contact us at privacy@keepsvault.com"
+    }
+  }
+}

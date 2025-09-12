@@ -15,20 +15,35 @@
     <!-- Desktop actions -->
     <nav class="nav-right">
       <div class="nav-links">
-        <a class="pill" href="./">Home</a>
-        <a class="pill" href="index.html#features">Features</a>
-        <a class="pill" href="index.html#pricing">Pricing</a>
-        <a class="pill" href="index.html#about">About</a>
-        <a class="pill" href="story.html">Story</a>
-        <a class="pill" href="privacy.html">Privacy</a>
-        <a class="pill" href="terms.html">Terms</a>
-        <a class="pill" href="security.html">Security</a>
-        <a class="pill" href="status.html">Status</a>
-        <a class="pill" href="index.html#contact">Contact</a>
-        <a class="pill" href="waitlist.html">Waitlist</a>
+        <a class="pill" href="./" id="nav-home">Home</a>
+        <a class="pill" href="index.html#features" id="nav-features">Features</a>
+        <a class="pill" href="index.html#pricing" id="nav-pricing">Pricing</a>
+        <a class="pill" href="index.html#about" id="nav-about">About</a>
+        <a class="pill" href="story.html" id="nav-story">Story</a>
+        <a class="pill" href="privacy.html" id="nav-privacy">Privacy</a>
+        <a class="pill" href="terms.html" id="nav-terms">Terms</a>
+        <a class="pill" href="security.html" id="nav-security">Security</a>
+        <a class="pill" href="status.html" id="nav-status">Status</a>
+        <a class="pill" href="index.html#contact" id="nav-contact">Contact</a>
+        <a class="pill" href="waitlist.html" id="nav-waitlist">Waitlist</a>
       </div>
-      <a class="btn btn-ghost" href="waitlist.html">Login</a>
-      <a class="btn btn-primary" href="waitlist.html">Sign up</a>
+      <a class="btn btn-ghost" href="waitlist.html" id="nav-login">Login</a>
+      <a class="btn btn-primary" href="waitlist.html" id="nav-signup">Sign up</a>
+      <div class="language-switcher">
+        <select id="languageSwitch" class="btn" aria-label="Change language" onchange="switchLanguage(this.value)">
+          <option value="en">English</option>
+          <option value="es">Español</option>
+          <option value="fr">Français</option>
+          <option value="de">Deutsch</option>
+          <option value="it">Italiano</option>
+          <option value="pt">Português</option>
+          <option value="ru">Русский</option>
+          <option value="zh">中文</option>
+          <option value="ja">日本語</option>
+          <option value="ko">한국어</option>
+        </select>
+        <div class="loading-text" style="display: none;">Loading...</div>
+      </div>
       <select id="themeSwitch" class="btn" aria-label="Change colour theme">
         <option value="">Blue</option>
         <option value="theme-amber">Amber</option>
@@ -40,20 +55,36 @@
 
   <!-- Mobile drawer (hidden on desktop) -->
   <div id="menuDrawer" class="menu-drawer" hidden>
-    <a class="pill" href="./">Home</a>
-    <a class="pill" href="index.html#features">Features</a>
-    <a class="pill" href="index.html#pricing">Pricing</a>
-    <a class="pill" href="index.html#about">About</a>
-    <a class="pill" href="story.html">Story</a>
-    <a class="pill" href="privacy.html">Privacy</a>
-    <a class="pill" href="terms.html">Terms</a>
-    <a class="pill" href="security.html">Security</a>
-    <a class="pill" href="status.html">Status</a>
-    <a class="pill" href="index.html#contact">Contact</a>
-    <a class="pill" href="waitlist.html">Waitlist</a>
+    <a class="pill" href="./" id="nav-home-mobile">Home</a>
+    <a class="pill" href="index.html#features" id="nav-features-mobile">Features</a>
+    <a class="pill" href="index.html#pricing" id="nav-pricing-mobile">Pricing</a>
+    <a class="pill" href="index.html#about" id="nav-about-mobile">About</a>
+    <a class="pill" href="story.html" id="nav-story-mobile">Story</a>
+    <a class="pill" href="privacy.html" id="nav-privacy-mobile">Privacy</a>
+    <a class="pill" href="terms.html" id="nav-terms-mobile">Terms</a>
+    <a class="pill" href="security.html" id="nav-security-mobile">Security</a>
+    <a class="pill" href="status.html" id="nav-status-mobile">Status</a>
+    <a class="pill" href="index.html#contact" id="nav-contact-mobile">Contact</a>
+    <a class="pill" href="waitlist.html" id="nav-waitlist-mobile">Waitlist</a>
     <div class="row" style="margin-top:.75rem;">
-      <a class="btn btn-ghost" href="waitlist.html">Login</a>
-      <a class="btn btn-primary" href="waitlist.html">Sign up</a>
+      <a class="btn btn-ghost" href="waitlist.html" id="nav-login-mobile">Login</a>
+      <a class="btn btn-primary" href="waitlist.html" id="nav-signup-mobile">Sign up</a>
+    </div>
+    <label class="label" style="margin-top:.75rem;">Language</label>
+    <div class="language-switcher">
+      <select id="languageSwitch_m" class="btn" aria-label="Change language (mobile)" onchange="switchLanguage(this.value)">
+        <option value="en">English</option>
+        <option value="es">Español</option>
+        <option value="fr">Français</option>
+        <option value="de">Deutsch</option>
+        <option value="it">Italiano</option>
+        <option value="pt">Português</option>
+        <option value="ru">Русский</option>
+        <option value="zh">中文</option>
+        <option value="ja">日本語</option>
+        <option value="ko">한국어</option>
+      </select>
+      <div class="loading-text" style="display: none;">Loading...</div>
     </div>
     <label class="label" style="margin-top:.75rem;">Theme</label>
     <select id="themeSwitch_m" class="btn" aria-label="Change colour theme (mobile)">
