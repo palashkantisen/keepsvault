@@ -226,6 +226,35 @@ function initLanguage() {
   }
 }
 
+// Set up event delegation for language switching (works even if elements are added later)
+document.addEventListener('change', async (e) => {
+  if (e.target.id === 'languageSwitch' || e.target.id === 'languageSwitch_m') {
+    const val = e.target.value;
+    console.log(`🌐 Language switch triggered: ${val}`);
+    
+    // Call switchLanguage if it's available
+    if (window.switchLanguage) {
+      await window.switchLanguage(val);
+      
+      // Keep both selects in sync
+      const otherId = e.target.id === 'languageSwitch' ? 'languageSwitch_m' : 'languageSwitch';
+      const other = document.getElementById(otherId);
+      if (other) other.value = val;
+    } else {
+      console.error('❌ switchLanguage function not available yet');
+    }
+  }
+});
+
+// Page content update registry
+const pageUpdateRegistry = [];
+
+// Register a page update function
+function registerPageUpdate(updateFunction) {
+  pageUpdateRegistry.push(updateFunction);
+  console.log(`📝 Registered page update function. Total: ${pageUpdateRegistry.length}`);
+}
+
 // Switch language function for header
 async function switchLanguage(languageCode) {
   console.log(`🌐 Switching to language: ${languageCode}`);
@@ -240,8 +269,16 @@ async function switchLanguage(languageCode) {
   window.dispatchEvent(event);
   console.log(`✅ languageChanged event dispatched for: ${languageCode}`);
   
-  // Test if any listeners are attached
-  console.log(`🔍 Event listeners count:`, window.addEventListener.toString());
+  // Trigger all registered page updates
+  console.log(`🌐 Triggering ${pageUpdateRegistry.length} page content updates for: ${languageCode}`);
+  for (const updateFunction of pageUpdateRegistry) {
+    try {
+      await updateFunction(languageCode);
+    } catch (error) {
+      console.error(`❌ Page update failed:`, error);
+    }
+  }
+  console.log(`✅ All page content updates completed for: ${languageCode}`);
 }
 
 // Export functions for global access
@@ -252,3 +289,4 @@ window.initLanguage = initLanguage;
 window.applyLanguage = applyLanguage;
 window.loadSharedLanguage = loadSharedLanguage;
 window.switchLanguage = switchLanguage;
+window.registerPageUpdate = registerPageUpdate;

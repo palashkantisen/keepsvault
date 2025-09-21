@@ -8,7 +8,7 @@
   <script>
   (function () {
     try {
-      var t = localStorage.getItem('kv-theme');
+      var t = localStorage.getItem('kv-theme') || 'theme-light';
       if (t) { document.documentElement.classList.add(t); } // put theme on <html>
     } catch (e) {}
   })();

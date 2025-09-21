@@ -7,7 +7,7 @@
   <script>
   (function () {
     try {
-      var t = localStorage.getItem('kv-theme');
+      var t = localStorage.getItem('kv-theme') || 'theme-light';
       if (t) { document.documentElement.classList.add(t); } // put theme on <html>
     } catch (e) {}
   })();
@@ -23,10 +23,14 @@
 </script>
 
   <main class="container section center">
-    <h1>Page not found</h1>
-    <p class="muted">The page may have moved or the link is wrong.</p>
+    <h1 id="error-404-title">404 - Page not found</h1>
+    <h2 id="error-404-subtitle">Oops! This page doesn't exist</h2>
+    <p id="error-404-description" class="muted">The page you're looking for might have been moved, deleted, or doesn't exist.</p>
     <div class="spacer"></div>
-
+    <div class="row">
+      <a href="/" class="btn btn-primary" id="error-404-home-button">Go Home</a>
+      <button onclick="history.back()" class="btn" id="error-404-back-button">Go Back</button>
+    </div>
   </main>
   <!-- Include footer -->
 <div id="footer-placeholder"></div>

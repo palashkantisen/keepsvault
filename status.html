@@ -8,7 +8,7 @@
   <script>
   (function () {
     try {
-      var t = localStorage.getItem('kv-theme');
+      var t = localStorage.getItem('kv-theme') || 'theme-light';
       if (t) { document.documentElement.classList.add(t); } // put theme on <html>
     } catch (e) {}
   })();
@@ -24,10 +24,20 @@
   </script>
 
   <main class="container section">
-    <h1>Status</h1>
+    <h1 id="status-title">Status</h1>
     <div class="card">
-      <p>All systems operational.</p>
-      <p class="muted">We’ll add a live status page later.</p>
+      <h2 id="status-subtitle">System Status</h2>
+      <h3 id="status-overall-title">Overall Status</h3>
+      <p id="status-overall-status">All systems operational.</p>
+      <p id="status-overall-desc" class="muted">We'll add a live status page later.</p>
+      
+      <h3 id="status-api-title">API Services</h3>
+      <p id="status-api-status">Operational</p>
+      <p id="status-api-desc" class="muted">All API endpoints are responding normally.</p>
+      
+      <h3 id="status-database-title">Database</h3>
+      <p id="status-database-status">Operational</p>
+      <p id="status-database-desc" class="muted">Database services are running without issues.</p>
     </div>
   </main>
 

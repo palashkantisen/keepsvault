@@ -33,15 +33,15 @@ function applyTheme(val) {
   const el = document.documentElement; // apply class on <html>
   // First remove all themes
   THEMES.forEach(c => el.classList.remove(c));
-  // Add the new theme if it's not the default blue
-  if (val && val !== 'theme-blue') {
+  // Add the new theme
+  if (val) {
     el.classList.add(val);
   }
 }
 
 function initTheme() {
   try {
-    const saved = localStorage.getItem('kv-theme') || '';
+    const saved = localStorage.getItem('kv-theme') || 'theme-light';
     if (saved) applyTheme(saved);
 
     // Get both theme selectors (desktop and mobile)

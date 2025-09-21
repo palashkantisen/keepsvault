@@ -140,23 +140,35 @@ async function initPageLanguageSystem() {
 document.addEventListener('DOMContentLoaded', initPageLanguageSystem);
 
 // Listen for language changes from shared system
-window.addEventListener('languageChanged', async (event) => {
-  const { language } = event.detail;
-  console.log(`🌐 Page received language change: ${language}`);
+// Page content update function
+async function updatePageContent(languageCode) {
+  console.log(`🌐 404 PAGE: Updating content for language: ${languageCode}`);
   
   try {
     // Load page-specific content for the new language
-    const translations = await loadPageLanguage(language);
+    const translations = await loadPageLanguage(languageCode);
     currentTranslations = translations;
     
     // Update page content
     updatePageText();
     
-    console.log(`✅ Page updated for language: ${language}`);
+    console.log(`✅ 404 PAGE updated for language: ${languageCode}`);
   } catch (error) {
-    console.error(`❌ Failed to update page for language ${language}:`, error);
+    console.error(`❌ Failed to update 404 PAGE for language ${languageCode}:`, error);
   }
-});
+}
+
+// Register the page update function with the shared system
+if (window.registerPageUpdate) {
+  window.registerPageUpdate(updatePageContent);
+} else {
+  // Fallback: register when the shared system is ready
+  window.addEventListener('DOMContentLoaded', () => {
+    if (window.registerPageUpdate) {
+      window.registerPageUpdate(updatePageContent);
+    }
+  });
+}
 
 // Export functions for global access
 window.loadPageLanguage = loadPageLanguage;

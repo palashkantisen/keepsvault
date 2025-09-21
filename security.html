@@ -8,7 +8,7 @@
   <script>
   (function () {
     try {
-      var t = localStorage.getItem('kv-theme');
+      var t = localStorage.getItem('kv-theme') || 'theme-light';
       if (t) { document.documentElement.classList.add(t); } // put theme on <html>
     } catch (e) {}
   })();
@@ -25,33 +25,33 @@
   </script>
 
   <main class="container section">
-    <h1>Security</h1>
+    <h1 id="security-title">Security</h1>
     <div class="card">
-      <p>This page gives a plain view of how we protect your data using industry-standard security practices.</p>
+      <p id="security-intro">This page gives a plain view of how we protect your data using industry-standard security practices.</p>
       <p class="muted">Last updated: <span id="last-updated" data-last-updated="October 10, 2023"></span></p>
       <p>MFA is planned for <span id="mfa-planned"></span>.</p>
 
-      <h2>Data protection</h2>
-      <ul class="muted">
+      <h2 id="security-encryption-title">Data protection</h2>
+      <ul class="muted" id="security-encryption-desc">
         <li>Encryption in transit (HTTPS/TLS) and at rest.</li>
         <li>Backups with regular restore tests.</li>
         <li>Least-privilege access for staff and systems.</li>
       </ul>
 
-      <h2>Account security</h2>
-      <ul class="muted">
+      <h2 id="security-access-title">Account security</h2>
+      <ul class="muted" id="security-access-desc">
         <li>Strong passwords recommended; MFA planned for Q4 2023.</li>
         <li>Session management with expiry.</li>
       </ul>
 
-      <h2>Operations</h2>
-      <ul class="muted">
+      <h2 id="security-monitoring-title">Operations</h2>
+      <ul class="muted" id="security-monitoring-desc">
         <li>Monitoring and alerting for core services.</li>
         <li>Change control and review of key components.</li>
       </ul>
 
-      <h2>Incidents</h2>
-      <ul class="muted">
+      <h2 id="security-compliance-title">Incidents</h2>
+      <ul class="muted" id="security-compliance-desc">
         <li>We will investigate and notify affected users where required by law.</li>
         <li>Contact: palashkantisen@gmail.com</li>
       </ul>

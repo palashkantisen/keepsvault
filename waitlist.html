@@ -9,7 +9,7 @@
   <script>
     (function () {
       try {
-        var t = localStorage.getItem('kv-theme');
+        var t = localStorage.getItem('kv-theme') || 'theme-light';
         if (t) { document.documentElement.classList.add(t); }
       } catch (e) {}
     })();
@@ -23,15 +23,15 @@
       .then(data => document.getElementById('header-placeholder').innerHTML = data);
   </script>
   <main class="container section">
-    <h1>Join the KeepsVault Waitlist</h1>
-    <p>Enter your details. We’ll email you when early access opens.</p>
+    <h1 id="waitlist-title">Join the KeepsVault Waitlist</h1>
+    <p id="waitlist-subtitle">Enter your details. We'll email you when early access opens.</p>
     <form class="card"
       action="https://docs.google.com/forms/d/e/1FAIpQLSd2aeVc68U_L0JYisY5bSD4QSj8ipD48XqOcpcoI-oMPT_elw/formResponse"
       method="POST" target="_blank">
       <div class="form-grid">
-        <label class="label" for="g-name">Full Name *</label>
+        <label class="label" for="g-name" id="waitlist-form-nameLabel">Full Name *</label>
         <input id="g-name" class="input" name="entry.1132170388" placeholder="Your name" required />
-        <label class="label" for="g-email">Email Address *</label>
+        <label class="label" for="g-email" id="waitlist-form-emailLabel">Email Address *</label>
         <input id="g-email" class="input" type="email" name="entry.706857230" placeholder="you@example.com" required />
         <span class="label">Preferred Plan *</span>
         <div>
