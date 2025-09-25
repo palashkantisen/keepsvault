@@ -1,0 +1,64 @@
+{
+  "meta": {
+    "title": "Política de Privacidad - KeepsVault",
+    "description": "Aprende cómo KeepsVault protege tu privacidad y maneja tus datos."
+  },
+  "privacy": {
+    "title": "Política de Privacidad",
+    "intro": "Esta política explica cómo manejamos tu información personal. Seguimos GDPR y estándares globales de privacidad para proteger tus datos en todo el mundo.",
+    "collect": {
+      "title": "Qué recopilamos",
+      "list": [
+        "Detalles de cuenta (nombre, email).",
+        "Tu contenido (tarjetas, archivos) que elijas almacenar.",
+        "Datos de uso para ayudar a ejecutar y mejorar el Servicio."
+      ]
+    },
+    "use": {
+      "title": "Cómo lo usamos",
+      "list": [
+        "Para proporcionar y asegurar el Servicio.",
+        "Para apoyarte y responder a solicitudes.",
+        "Para enviar avisos importantes sobre el Servicio."
+      ]
+    },
+    "sharing": {
+      "title": "Compartir",
+      "list": [
+        "No vendemos tus datos.",
+        "Podemos usar proveedores de confianza (ej. hosting) bajo contrato.",
+        "Podemos divulgar si es requerido por ley."
+      ]
+    },
+    "storage": {
+      "title": "Almacenamiento y ubicación",
+      "list": [
+        "Los datos se almacenan de forma segura en regiones de nube reputables.",
+        "Aplicamos cifrado en tránsito y en reposo."
+      ]
+    },
+    "rights": {
+      "title": "Tus derechos (GDPR)",
+      "list": [
+        "Acceso: Solicitar una copia de tus datos personales",
+        "Rectificación: Corregir datos inexactos o incompletos",
+        "Eliminación: Solicitar la eliminación de tus datos",
+        "Portabilidad: Exportar tus datos en formato legible por máquina",
+        "Objeción: Objetar al procesamiento de tus datos",
+        "Retiro: Retirar el consentimiento en cualquier momento"
+      ]
+    },
+    "choices": {
+      "title": "Tus opciones",
+      "list": [
+        "Puedes acceder, corregir o eliminar tus datos, sujeto a la ley y respaldos.",
+        "Puedes dejar de usar el Servicio en cualquier momento."
+      ]
+    },
+    "contact": {
+      "title": "Contacto",
+      "email": "Para preguntar sobre privacidad: palashkantisen@gmail.com",
+      "lastUpdated": "Última actualización:"
+    }
+  }
+}

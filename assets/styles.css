@@ -1,4 +1,103 @@
 /* ------------------------------
+   LANGUAGE SWITCHER
+------------------------------ */
+.language-switcher {
+  position: relative;
+  display: inline-block;
+}
+
+.language-switcher.loading {
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.language-switcher.loading .loading-text {
+  display: block !important;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: var(--surface);
+  color: var(--text);
+  padding: 0.5rem;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  text-align: center;
+  z-index: 10;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.language-switcher select {
+  min-width: 120px;
+}
+
+.language-switcher select:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Header responsive fixes */
+
+.nav-right .btn {
+  white-space: nowrap;
+  min-width: auto;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+}
+
+/* Language and theme selectors */
+#languageSwitch, #themeSwitch {
+  font-family: inherit;
+  font-size: 0.875rem;
+  min-width: 100px;
+}
+
+/* Mobile responsive header */
+@media (max-width: 1200px) {
+  .nav-right {
+    gap: 0.25rem;
+  }
+  
+  .nav-right .btn {
+    padding: 0.375rem 0.75rem;
+    font-size: 0.8rem;
+  }
+  
+  #languageSwitch, #themeSwitch {
+    min-width: 80px;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 1000px) {
+  .nav-right {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+  
+  .nav-links {
+    order: 1;
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+  
+  .nav-right .btn {
+    margin: 0.125rem;
+  }
+}
+
+/* Mobile language switcher */
+@media (max-width: 820px) {
+  .language-switcher {
+    width: 100%;
+  }
+  
+  .language-switcher select {
+    width: 100%;
+  }
+}
+
+/* ------------------------------
    THEME (CSS variables)
 ------------------------------ */
 :root{
@@ -16,12 +115,12 @@
 
 /* Light theme */
 .theme-light {
-  --bg: bg-[#FAFAFA]; /* Soft beige background */
+  --bg: #FAFAFA; /* Soft beige background */
   --bg-elev: #f5f5dc;
-  --surface: [#FAFAFA];
+  --surface: #FAFAFA;
   --text: #586e75;
   --muted: #93a1a1;
-  --card: bg-[#Ffffff];
+  --card: #ffffff;
   --border: #d3c4a1;
   --brand: #b58900; /* Harmonized brand color */
   --brand-600: #a57c00;
@@ -62,7 +161,7 @@ a:hover{ text-decoration:underline; }
 .btn, select.btn, .input, .textarea, details{
   background:linear-gradient(180deg, var(--surface), var(--card));
   border:1px solid var(--border);
-  border-radius:12px;
+  border-radius:4px;
 }
 .btn:hover, .card:hover, .input:hover, .textarea:hover, details:hover, details[open]{
   transform:translateY(-2px);
@@ -106,8 +205,14 @@ a:hover{ text-decoration:underline; }
 .brand{ display:flex; align-items:center; gap:.75rem; font-weight:700; letter-spacing:.2px; }
 .brand span{ font-size:clamp(1rem,1.2vw,1.1rem); line-height:1; }
 .brand img{ height:clamp(32px,3.2vw,48px); width:auto; display:block; }
-.nav-right{ display:flex; align-items:center; gap:.5rem; }
-.nav-links{ display:flex; gap:.75rem; }
+.nav-right{ 
+  display:flex; 
+  align-items:center; 
+  gap:.25rem; 
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
 
 .theme-light .nav {
   background: #f5f5f5 !important; /* White background for light theme */
@@ -119,7 +224,7 @@ a:hover{ text-decoration:underline; }
 ------------------------------ */
 .btn{
   appearance:none; color:var(--text);
-  padding:.7rem 1rem; font-weight:600; letter-spacing:.2px; cursor:pointer;
+  padding:.7rem 1rem; font-weight:normal; letter-spacing:.2px; cursor:pointer;
   transition:transform .15s, box-shadow .2s, border-color .2s;
   box-shadow:0 0 0 0 var(--ring);
 }
@@ -238,7 +343,8 @@ footer{ border-top:1px solid var(--border); padding:2rem 0; color:var(--muted); 
 .pill{ 
   border:1px solid var(--border); 
   padding:.25rem .6rem; 
-  border-radius:999px; 
+  border-radius:4px !important; 
+  font-size: 0.875rem;
   transition:transform .15s, box-shadow .2s, border-color .2s;
   text-decoration: none;
   color: var(--text);
@@ -326,6 +432,32 @@ footer{ border-top:1px solid var(--border); padding:2rem 0; color:var(--muted); 
   body { padding-top: 64px; }
 }
 
+/* Navigation responsive wrapping */
+@media (max-width: 1200px) {
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+  
+  .nav-right {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+}
+
+/* Force navigation to wrap instead of overflow */
+@media (max-width: 1400px) {
+  .nav-links {
+    flex-wrap: wrap;
+    max-width: 100%;
+  }
+  
+  .nav-right {
+    flex-wrap: wrap;
+    max-width: 100%;
+  }
+}
+
 /* Improve tap targets */
 .btn, .pill, select.btn { min-height: 42px; }
 
@@ -339,30 +471,6 @@ footer{ border-top:1px solid var(--border); padding:2rem 0; color:var(--muted); 
   background: #f0f0f0; /* Lighter background for light theme */
 }
 
-select {
-  background-color: #1a1a1a; /* Match theme background */
-  color: #fff; /* Text color */
-  border: 1px solid #333; /* Border color */
-  padding: 8px;
-  border-radius: 4px;
-  font-family: inherit;
-}
 
-select:focus {
-  outline: none;
-  border-color: #00ff00; /* Highlight color on focus */
-}
 
-form .input {
-  background-color: #1a1a1a !important;
-  color: #fff !important;
-  border: 1px solid #333 !important;
-  padding: 8px !important;
-  border-radius: 4px !important;
-  font-family: inherit !important;
-}
 
-form .input:focus {
-  outline: none !important;
-  border-color: #00ff00 !important;
-}

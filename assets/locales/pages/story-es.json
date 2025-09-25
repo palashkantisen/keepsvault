@@ -1,0 +1,67 @@
+{
+  "meta": {
+    "title": "Nuestra Historia - KeepsVault",
+    "description": "Conoce la historia detrás de KeepsVault y por qué lo construimos."
+  },
+  "story": {
+    "title": "La Historia Detrás de KeepsVault",
+    "beginning": {
+      "title": "Cómo comenzó todo",
+      "p1": "En 2004, mi mundo cambió para siempre cuando mi padre falleció. En medio del dolor, descubrí algo que me atormentaría durante años.",
+      "p2": "Mi madre quedó completamente perdida. No tenía idea de dónde mi padre había guardado sus cuentas bancarias, acciones, testamento o ahorros. Nada. El hombre que siempre se había encargado de todo se había ido, y con él se fue el conocimiento de dónde estaba almacenada toda su vida financiera.",
+      "p3": "Observé impotente mientras ella luchaba por reconstruir su panorama financiero, llamando a bancos, buscando en papeles viejos, y enfrentando la dura realidad de que estaba completamente desprevenida para este momento."
+    },
+    "truth": {
+      "title": "La desgarradora verdad que descubrí",
+      "p1": "A lo largo de los años, me di cuenta de que esta no era solo la historia de mi familia. Era la historia de todos.",
+      "p2": "Vi el mismo patrón en todas partes: todos sabemos que deberíamos estar organizados, pero la vida se pone ocupada, y las cosas importantes se dispersan.",
+      "list": [
+        "Cada familia que conocí enfrentaba la misma realidad aterradora - estaban a una crisis de distancia del caos",
+        "Las parejas jóvenes no tenían sistema para organizar sus responsabilidades crecientes",
+        "Las familias modernas se ahogaban en el caos digital a través de múltiples aplicaciones y dispositivos",
+        "Incluso yo luchaba por mantener un registro de los detalles importantes de mi propia vida"
+      ]
+    },
+    "why": {
+      "title": "Por qué construí KeepsVault",
+      "p1": "No podía dejar que otras familias pasaran por lo que pasó la mía. Pero también me di cuenta de algo más profundo - todos vivimos con estrés constante de bajo nivel sobre las cosas que se supone que debemos recordar pero seguimos olvidando.",
+      "p2": "Piénsalo: ¿cuántas veces te has despertado en medio de la noche recordando algo importante que olvidaste? ¿O sentiste esa preocupación persistente de que estás perdiendo una fecha límite crítica? Ese es el estrés que quiero eliminar.",
+      "list": [
+        "Prevenir el caos que sigue cuando alguien se va o queda incapacitado",
+        "Dar a las familias tranquilidad sabiendo que todo lo importante está en un lugar seguro",
+        "Mantener a las personas conectadas a lo que más importa, incluso en tiempos difíciles",
+        "Hacer la organización simple para que las familias ocupadas realmente la usen"
+      ]
+    },
+    "mission": {
+      "title": "Nuestra misión",
+      "p1": "KeepsVault es más que una aplicación. Es mi promesa a las familias de todas partes:",
+      "p2": "Pero más que eso, se trata de devolverte la tranquilidad que mereces. No más ataques de pánico nocturnos sobre renovaciones olvidadas. No más búsquedas frenéticas de papeles importantes. No más sentir que constantemente estás jugando a ponerte al día con tu propia vida.",
+      "list": [
+        "Nunca más una familia quedará a oscuras sobre sus propios asuntos",
+        "Nunca más alguien perderá una fecha límite crítica porque se olvidó",
+        "Nunca más los documentos importantes se perderán en el caos de la vida",
+        "Siempre las familias tendrán un lugar seguro y organizado para lo que más importa"
+      ]
+    },
+    "transform": {
+      "title": "Cómo transforma la vida diaria",
+      "p1": "Imagina despertar cada mañana sabiendo exactamente qué necesita tu atención hoy. No porque estés estresado por olvidar algo, sino porque tienes un sistema gentil y confiable que te respalda.",
+      "p2": "Esto no se trata de ser perfecto. Se trata de estar preparado. Se trata de tener una cosa menos de qué preocuparse en un mundo que ya nos da demasiado estrés.",
+      "list": [
+        "¿Tu pasaporte expira en 3 meses? Lo sabrás con meses de anticipación, no en el aeropuerto",
+        "¿Pago de seguro vencido? Recibirás un recordatorio amigable, no un aviso de cancelación",
+        "¿Mantenimiento de propiedad necesario? Te mantendrás en horario, manteniendo tu cobertura intacta",
+        "¿Emergencia familiar? Todos saben exactamente dónde encontrar lo que necesitan"
+      ]
+    },
+    "join": {
+      "title": "Únete al viaje",
+      "p1": "Esto es personal para mí. Cada familia que usa KeepsVault es una familia menos que enfrentará la pesadilla que enfrentó mi madre.",
+      "p2": "Pero también se trata de devolverte algo precioso: la tranquilidad que viene de saber que tu vida está organizada, tu familia está protegida, y no estás constantemente jugando a ponerte al día con tus propias responsabilidades.",
+      "p3": "Ya sea que estés organizando tu propia vida, ayudando a padres envejecientes, o construyendo un sistema para tu familia en crecimiento, no estás solo. Juntos, podemos cambiar cómo las familias manejan lo que más importa.",
+      "p4": "Asegurémonos de que ninguna familia tenga que decir \"no sé dónde está nada\" nunca más. Y démosle a cada familia el regalo de la tranquilidad diaria.",
+      "signature": "— El Equipo de KeepsVault"
+    }
+  }
+}

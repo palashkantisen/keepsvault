@@ -1,0 +1,39 @@
+{
+  "meta": {
+    "title": "Términos de Servicio - KeepsVault",
+    "description": "Lee nuestros términos de servicio para usar KeepsVault."
+  },
+  "terms": {
+    "title": "Términos de Servicio",
+    "lastUpdated": "Última actualización: Enero 2024",
+    "intro": "Estos términos rigen tu uso de KeepsVault. Al usar nuestro servicio, aceptas estos términos.",
+    "acceptance": {
+      "title": "Aceptación de Términos",
+      "description": "Al acceder o usar KeepsVault, aceptas estar sujeto a estos términos y condiciones."
+    },
+    "service": {
+      "title": "Descripción del Servicio",
+      "description": "KeepsVault es una plataforma segura para organizar y compartir documentos e información importantes."
+    },
+    "user": {
+      "title": "Responsabilidades del Usuario",
+      "description": "Los usuarios son responsables de mantener la seguridad de sus cuentas y la precisión de su información."
+    },
+    "privacy": {
+      "title": "Privacidad",
+      "description": "Tu privacidad es importante para nosotros. Por favor revisa nuestra Política de Privacidad para entender cómo recopilamos y usamos tu información."
+    },
+    "liability": {
+      "title": "Limitación de Responsabilidad",
+      "description": "KeepsVault no será responsable por daños indirectos, incidentales, especiales o consecuenciales."
+    },
+    "changes": {
+      "title": "Cambios a los Términos",
+      "description": "Podemos actualizar estos términos de vez en cuando. Notificaremos a los usuarios de cualquier cambio material."
+    },
+    "contact": {
+      "title": "Información de Contacto",
+      "description": "Si tienes preguntas sobre estos términos, contáctanos en legal@keepsvault.com"
+    }
+  }
+}

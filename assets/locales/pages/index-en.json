@@ -1,0 +1,95 @@
+{
+  "meta": {
+    "title": "KeepsVault – Keep life's cards secure",
+    "description": "Create, organize, and share cards and stacks. Your data stays yours."
+  },
+  "hero": {
+    "kicker": "Never lose important documents again",
+    "title": "Organize life's details in one<br/>secure place",
+    "subtitle": "Keep passports, medical records, and important dates organized. Share safely with family and professionals. Your data stays secure and private.",
+    "tryFree": "Try it free",
+    "seeHow": "See how it works",
+    "privacyFirst": "Privacy first",
+    "simpleToUse": "Simple to use",
+    "worksAnywhere": "Works anywhere"
+  },
+  "howItWorks": {
+    "title": "How it works",
+    "step1": {
+      "title": "Create",
+      "description": "Add your passport, medical records, or any important document as a card."
+    },
+    "step2": {
+      "title": "Organize",
+      "description": "Group related cards into stacks like \"Health\", \"Travel\", or \"Family\"."
+    },
+    "step3": {
+      "title": "Share & stay safe",
+      "description": "Share with family or professionals. Choose who can view or edit."
+    }
+  },
+  "features": {
+    "title": "Features",
+    "cardsStacks": {
+      "title": "Cards & stacks",
+      "description": "Organize documents, dates, and contacts into logical groups.",
+      "readMore": "Read more",
+      "details": [
+        "Create cards for passports, medical records, contacts",
+        "Group into stacks like \"Health\", \"Travel\", \"Family\"",
+        "Drag and drop to reorder (mobile app)"
+      ]
+    },
+    "secureSharing": {
+      "title": "Secure sharing",
+      "description": "Share only what's needed, with clear access.",
+      "readMore": "Read more",
+      "details": [
+        "Share a single card or a whole stack",
+        "View or edit access",
+        "Stop sharing any time"
+      ]
+    },
+    "filesNotes": {
+      "title": "Files & notes",
+      "description": "Upload passports, medical records, and add important notes.",
+      "readMore": "Read more",
+      "details": [
+        "PDF, image, and document uploads",
+        "Add notes and important dates",
+        "Quick search across all your cards"
+      ]
+    },
+    "smartReminders": {
+      "title": "Smart reminders",
+      "description": "Never miss passport renewals or medical appointments.",
+      "readMore": "Read more",
+      "details": [
+        "Email alerts for important dates",
+        "Snooze reminders by week or month",
+        "Export calendar of upcoming dates"
+      ]
+    },
+    "worksAnywhere": {
+      "title": "Works anywhere",
+      "description": "Web-based and mobile-ready.",
+      "readMore": "Read more",
+      "details": [
+        "No install needed",
+        "Responsive layout",
+        "Fast to load"
+      ]
+    },
+    "privacyByDesign": {
+      "title": "Privacy by design",
+      "description": "You decide who sees what.",
+      "readMore": "Read more",
+      "details": [
+        "Clear access controls",
+        "Limited data collection",
+        "GDPR and global privacy compliant"
+      ]
+    }
+  },
+  "hide": "Hide"
+}

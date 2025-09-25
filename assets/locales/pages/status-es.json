@@ -1,0 +1,25 @@
+{
+  "meta": {
+    "title": "Estado del Sistema - KeepsVault",
+    "description": "Verifica el estado actual de los servicios y sistemas de KeepsVault."
+  },
+  "status": {
+    "title": "Estado del Sistema",
+    "subtitle": "Estado en tiempo real de todos los servicios de KeepsVault",
+    "overall": {
+      "title": "Estado General",
+      "status": "Todos los Sistemas Operativos",
+      "description": "Todos los servicios están funcionando normalmente sin problemas conocidos."
+    },
+    "api": {
+      "title": "Servicios API",
+      "status": "Operativo",
+      "description": "Todos los endpoints de API están respondiendo normalmente."
+    },
+    "database": {
+      "title": "Base de Datos",
+      "status": "Operativo",
+      "description": "Los servicios de base de datos están funcionando sin problemas y sin problemas de rendimiento."
+    }
+  }
+}

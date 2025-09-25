@@ -1,0 +1,42 @@
+{
+  "meta": {
+    "title": "Únete a la Lista de Espera - KeepsVault",
+    "description": "Sé el primero en saber cuándo se lanza KeepsVault. Únete a nuestra lista de espera para acceso temprano."
+  },
+  "waitlist": {
+    "title": "Únete a la Lista de Espera",
+    "subtitle": "Sé el primero en experimentar KeepsVault",
+    "description": "Obtén acceso temprano a KeepsVault y ayuda a dar forma al futuro de la gestión segura de documentos.",
+    "form": {
+      "title": "Obtén Acceso Temprano",
+      "nameLabel": "Nombre Completo *",
+      "namePlaceholder": "Tu nombre",
+      "emailLabel": "Dirección de Email *",
+      "emailPlaceholder": "tu@ejemplo.com",
+      "planLabel": "Plan Preferido *",
+      "freeLabel": "Gratis",
+      "premiumLabel": "Premium ($10 USD)",
+      "notsureLabel": "No Estoy Seguro",
+      "usageLabel": "¿Cómo planeas usar KeepsVault?",
+      "usagePlaceholder": "Tu respuesta",
+      "countryLabel": "País",
+      "submitButton": "Unirse a la Lista"
+    },
+    "benefits": {
+      "title": "Lo que Obtendrás",
+      "list": [
+        "Acceso temprano a KeepsVault",
+        "Características beta exclusivas",
+        "Soporte prioritario",
+        "Precios especiales de lanzamiento"
+      ]
+    },
+    "faq": {
+      "title": "Preguntas Frecuentes",
+      "q1": "¿Cuándo se lanzará KeepsVault?",
+      "a1": "Nuestro objetivo es un lanzamiento en Q2 2024. Los miembros de la lista de espera tendrán acceso primero.",
+      "q2": "¿Hay un costo para unirse a la lista de espera?",
+      "a2": "No, unirse a la lista de espera es completamente gratis. Solo pagarás cuando comiences a usar el servicio."
+    }
+  }
+}

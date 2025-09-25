@@ -1,0 +1,13 @@
+{
+  "meta": {
+    "title": "Página No Encontrada - KeepsVault",
+    "description": "La página que buscas no existe. Regresa al inicio de KeepsVault."
+  },
+  "error404": {
+    "title": "404 - Página No Encontrada",
+    "subtitle": "¡Ups! Esta página no existe",
+    "description": "La página que buscas podría haber sido movida, eliminada o no existe.",
+    "homeButton": "Ir al Inicio",
+    "backButton": "Volver Atrás"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "meta": {
+    "title": "Join the Waitlist - KeepsVault",
+    "description": "Be the first to know when KeepsVault launches. Join our waitlist for early access."
+  },
+  "waitlist": {
+    "title": "Join the Waitlist",
+    "subtitle": "Be the first to experience KeepsVault",
+    "description": "Get early access to KeepsVault and help shape the future of secure document management.",
+    "form": {
+      "title": "Get Early Access",
+      "nameLabel": "Full Name *",
+      "namePlaceholder": "Your name",
+      "emailLabel": "Email Address *",
+      "emailPlaceholder": "you@example.com",
+      "planLabel": "Preferred Plan *",
+      "freeLabel": "Free",
+      "premiumLabel": "Premium ($10 USD)",
+      "notsureLabel": "Not Sure Yet",
+      "usageLabel": "How do you plan to use KeepsVault?",
+      "usagePlaceholder": "Your answer",
+      "countryLabel": "Country",
+      "submitButton": "Join Waitlist"
+    },
+    "benefits": {
+      "title": "What You'll Get",
+      "list": [
+        "Early access to KeepsVault",
+        "Exclusive beta features",
+        "Priority support",
+        "Special launch pricing"
+      ]
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "q1": "When will KeepsVault launch?",
+      "a1": "We're targeting a Q2 2024 launch. Waitlist members will get access first.",
+      "q2": "Is there a cost to join the waitlist?",
+      "a2": "No, joining the waitlist is completely free. You'll only pay when you start using the service."
+    }
+  }
+}

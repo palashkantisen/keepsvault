@@ -8,7 +8,7 @@
   <script>
   (function () {
     try {
-      var t = localStorage.getItem('kv-theme');
+      var t = localStorage.getItem('kv-theme') || 'theme-light';
       if (t) { document.documentElement.classList.add(t); } // put theme on <html>
     } catch (e) {}
   })();
@@ -25,39 +25,39 @@
   </script>
 
   <main class="container section">
-    <h1>Privacy Policy</h1>
+    <h1 id="privacy-title">Privacy Policy</h1>
     <div class="card">
-      <p>This policy explains how we handle your personal information. We follow GDPR and global privacy standards to protect your data worldwide.</p>
+      <p id="privacy-intro">This policy explains how we handle your personal information. We follow GDPR and global privacy standards to protect your data worldwide.</p>
 
-      <h2>What we collect</h2>
-      <ul class="muted">
+      <h2 id="privacy-collect-title">What we collect</h2>
+      <ul class="muted" id="privacy-collect-list">
         <li>Account details (name, email).</li>
         <li>Your content (cards, files) that you choose to store.</li>
         <li>Usage data to help run and improve the Service.</li>
       </ul>
 
-      <h2>How we use it</h2>
-      <ul class="muted">
+      <h2 id="privacy-use-title">How we use it</h2>
+      <ul class="muted" id="privacy-use-list">
         <li>To provide and secure the Service.</li>
         <li>To support you and respond to requests.</li>
         <li>To send important notices about the Service.</li>
       </ul>
 
-      <h2>Sharing</h2>
-      <ul class="muted">
+      <h2 id="privacy-sharing-title">Sharing</h2>
+      <ul class="muted" id="privacy-sharing-list">
         <li>We do not sell your data.</li>
         <li>We may use trusted providers (e.g. hosting) under contract.</li>
         <li>We may disclose if required by law.</li>
       </ul>
 
-      <h2>Storage and location</h2>
-      <ul class="muted">
+      <h2 id="privacy-storage-title">Storage and location</h2>
+      <ul class="muted" id="privacy-storage-list">
         <li>Data is stored securely in reputable cloud regions.</li>
         <li>We apply encryption in transit and at rest.</li>
       </ul>
 
-      <h2>Your rights (GDPR)</h2>
-      <ul class="muted">
+      <h2 id="privacy-rights-title">Your rights (GDPR)</h2>
+      <ul class="muted" id="privacy-rights-list">
         <li>Access: Request a copy of your personal data</li>
         <li>Rectification: Correct inaccurate or incomplete data</li>
         <li>Erasure: Request deletion of your data</li>
@@ -66,15 +66,15 @@
         <li>Withdrawal: Withdraw consent at any time</li>
       </ul>
 
-      <h2>Your choices</h2>
-      <ul class="muted">
+      <h2 id="privacy-choices-title">Your choices</h2>
+      <ul class="muted" id="privacy-choices-list">
         <li>You can access, correct, or delete your data, subject to law and backups.</li>
         <li>You can stop using the Service at any time.</li>
       </ul>
 
-      <h2>Contact</h2>
-      <p class="muted">To ask about privacy: palashkantisen@gmail.com</p>
-      <p class="muted">Last updated: <span id="last-updated-privacy"></span></p>
+      <h2 id="privacy-contact-title">Contact</h2>
+      <p class="muted" id="privacy-contact-email">To ask about privacy: palashkantisen@gmail.com</p>
+      <p class="muted" id="privacy-last-updated">Last updated: <span id="last-updated-privacy"></span></p>
     </div>
   </main>
 
@@ -87,6 +87,8 @@
   </script>
 
   <!-- Include common scripts -->
+  <script src="assets/translation-shared.js"></script>
+  <script src="assets/translation-privacy.js"></script>
   <script src="common.js"></script>
   <script>
     document.getElementById('y').textContent = new Date().getFullYear();
