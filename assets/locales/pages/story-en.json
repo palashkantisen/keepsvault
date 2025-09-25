@@ -4,23 +4,64 @@
     "description": "Learn about the story behind KeepsVault and why we built it."
   },
   "story": {
-    "title": "Our Story",
+    "title": "The Story Behind KeepsVault",
     "beginning": {
-      "title": "The Beginning",
-      "p1": "KeepsVault started with a simple problem: keeping important documents organized and accessible when you need them most.",
-      "p2": "After years of struggling with scattered files, forgotten passwords, and lost documents, we knew there had to be a better way.",
-      "p3": "We envisioned a secure, simple platform that would help people organize their most important information and share it safely with family and professionals."
+      "title": "How it all began",
+      "p1": "In 2004, my world changed forever when my father passed away. In the midst of grief, I discovered something that would haunt me for years to come.",
+      "p2": "My mother was left completely lost. She had no idea where my father had kept their bank accounts, shares, will, or savings. Nothing. The man who had always taken care of everything was gone, and with him went the knowledge of where their entire financial life was stored.",
+      "p3": "I watched helplessly as she struggled to piece together their financial picture, calling banks, searching through old papers, and facing the harsh reality that she was completely unprepared for this moment."
     },
     "truth": {
-      "title": "The Truth About Document Management",
-      "p1": "Most people struggle with document organization because existing solutions are either too complex or not secure enough.",
-      "p2": "We believe that everyone deserves access to tools that make life easier, not harder.",
+      "title": "The heartbreaking truth I discovered",
+      "p1": "Over the years, I realized this wasn't just my family's story. It was everyone's story.",
+      "p2": "I saw the same pattern everywhere: we all know we should be organized, but life gets busy, and important things get scattered.",
       "list": [
-        "Documents should be easy to find when you need them",
-        "Sharing should be simple but secure",
-        "Your data should always remain yours",
-        "The interface should be intuitive for everyone"
+        "Every family I met faced the same terrifying reality - they were one crisis away from chaos",
+        "Young couples had no system for organizing their growing responsibilities",
+        "Modern families were drowning in digital chaos across multiple apps and devices",
+        "Even I struggled to keep track of my own life's important details"
       ]
+    },
+    "why": {
+      "title": "Why I built KeepsVault",
+      "p1": "I couldn't let other families go through what mine did. But I also realized something deeper - we all live with constant, low-level stress about the things we're supposed to remember but keep forgetting.",
+      "p2": "Think about it: how many times have you woken up in the middle of the night remembering something important you forgot? Or felt that nagging worry that you're missing a critical deadline? That's the stress I want to eliminate.",
+      "list": [
+        "Prevent the chaos that follows when someone is gone or incapacitated",
+        "Give families peace of mind knowing everything important is in one safe place",
+        "Keep people connected to what matters most, even in difficult times",
+        "Make organization simple so busy families actually use it"
+      ]
+    },
+    "mission": {
+      "title": "Our mission",
+      "p1": "KeepsVault is more than an app. It's my promise to families everywhere:",
+      "p2": "But more than that, it's about giving you back the peace of mind you deserve. No more midnight panic attacks about forgotten renewals. No more frantic searches for important papers. No more feeling like you're constantly playing catch-up with your own life.",
+      "list": [
+        "Never again will a family be left in the dark about their own affairs",
+        "Never again will someone miss a critical deadline because they forgot",
+        "Never again will important documents be lost in the chaos of life",
+        "Always will families have a safe, organized place for what matters most"
+      ]
+    },
+    "transform": {
+      "title": "How it transforms daily life",
+      "p1": "Imagine waking up each morning knowing exactly what needs your attention today. Not because you're stressed about forgetting something, but because you have a gentle, reliable system that's got your back.",
+      "p2": "This isn't about being perfect. It's about being prepared. It's about having one less thing to worry about in a world that already gives us too much to stress over.",
+      "list": [
+        "Your passport expires in 3 months? You'll know months in advance, not at the airport",
+        "Insurance payment due? You'll get a friendly reminder, not a cancellation notice",
+        "Property maintenance needed? You'll stay on schedule, keeping your coverage intact",
+        "Family emergency? Everyone knows exactly where to find what they need"
+      ]
+    },
+    "join": {
+      "title": "Join the journey",
+      "p1": "This is personal for me. Every family that uses KeepsVault is one less family that will face the nightmare my mother did.",
+      "p2": "But it's also about giving you back something precious: the peace of mind that comes from knowing your life is organized, your family is protected, and you're not constantly playing catch-up with your own responsibilities.",
+      "p3": "Whether you're organizing your own life, helping aging parents, or building a system for your growing family, you're not alone. Together, we can change how families handle what matters most.",
+      "p4": "Let's make sure no family ever has to say \"I don't know where anything is\" again. And let's give every family the gift of daily peace of mind.",
+      "signature": "— The KeepsVault Team"
     }
   }
 }

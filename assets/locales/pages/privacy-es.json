@@ -5,51 +5,60 @@
   },
   "privacy": {
     "title": "Política de Privacidad",
-    "lastUpdated": "Última actualización: Enero 2024",
-    "intro": "Esta política de privacidad explica cómo KeepsVault recopila, usa y protege tu información.",
-    "infoWeCollect": {
-      "title": "Información que Recopilamos",
-      "description": "Solo recopilamos la información necesaria para brindar nuestro servicio:",
+    "intro": "Esta política explica cómo manejamos tu información personal. Seguimos GDPR y estándares globales de privacidad para proteger tus datos en todo el mundo.",
+    "collect": {
+      "title": "Qué recopilamos",
       "list": [
-        "Información de cuenta (email, nombre)",
-        "Tarjetas y pilas que creas",
-        "Archivos que subes",
-        "Datos de uso para mejorar nuestro servicio"
+        "Detalles de cuenta (nombre, email).",
+        "Tu contenido (tarjetas, archivos) que elijas almacenar.",
+        "Datos de uso para ayudar a ejecutar y mejorar el Servicio."
       ]
     },
-    "howWeUse": {
-      "title": "Cómo Usamos tu Información",
-      "description": "Usamos tu información para:",
+    "use": {
+      "title": "Cómo lo usamos",
       "list": [
-        "Brindar y mantener nuestro servicio",
-        "Procesar tus solicitudes",
-        "Enviar notificaciones importantes",
-        "Mejorar nuestro servicio"
+        "Para proporcionar y asegurar el Servicio.",
+        "Para apoyarte y responder a solicitudes.",
+        "Para enviar avisos importantes sobre el Servicio."
       ]
     },
-    "dataSecurity": {
-      "title": "Seguridad de Datos",
-      "description": "Protegemos tus datos con:",
+    "sharing": {
+      "title": "Compartir",
       "list": [
-        "Cifrado de extremo a extremo",
-        "Centros de datos seguros",
-        "Auditorías de seguridad regulares",
-        "Controles de acceso"
+        "No vendemos tus datos.",
+        "Podemos usar proveedores de confianza (ej. hosting) bajo contrato.",
+        "Podemos divulgar si es requerido por ley."
       ]
     },
-    "yourRights": {
-      "title": "Tus Derechos",
-      "description": "Tienes derecho a:",
+    "storage": {
+      "title": "Almacenamiento y ubicación",
       "list": [
-        "Acceder a tus datos",
-        "Corregir información inexacta",
-        "Eliminar tu cuenta",
-        "Exportar tus datos"
+        "Los datos se almacenan de forma segura en regiones de nube reputables.",
+        "Aplicamos cifrado en tránsito y en reposo."
       ]
     },
-    "contactUs": {
-      "title": "Contáctanos",
-      "description": "Si tienes preguntas sobre esta política de privacidad, contáctanos en privacy@keepsvault.com"
+    "rights": {
+      "title": "Tus derechos (GDPR)",
+      "list": [
+        "Acceso: Solicitar una copia de tus datos personales",
+        "Rectificación: Corregir datos inexactos o incompletos",
+        "Eliminación: Solicitar la eliminación de tus datos",
+        "Portabilidad: Exportar tus datos en formato legible por máquina",
+        "Objeción: Objetar al procesamiento de tus datos",
+        "Retiro: Retirar el consentimiento en cualquier momento"
+      ]
+    },
+    "choices": {
+      "title": "Tus opciones",
+      "list": [
+        "Puedes acceder, corregir o eliminar tus datos, sujeto a la ley y respaldos.",
+        "Puedes dejar de usar el Servicio en cualquier momento."
+      ]
+    },
+    "contact": {
+      "title": "Contacto",
+      "email": "Para preguntar sobre privacidad: palashkantisen@gmail.com",
+      "lastUpdated": "Última actualización:"
     }
   }
 }

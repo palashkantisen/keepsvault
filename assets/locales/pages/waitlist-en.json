@@ -9,10 +9,17 @@
     "description": "Get early access to KeepsVault and help shape the future of secure document management.",
     "form": {
       "title": "Get Early Access",
-      "emailLabel": "Email Address",
-      "emailPlaceholder": "your@email.com",
-      "nameLabel": "Full Name",
-      "namePlaceholder": "Your full name",
+      "nameLabel": "Full Name *",
+      "namePlaceholder": "Your name",
+      "emailLabel": "Email Address *",
+      "emailPlaceholder": "you@example.com",
+      "planLabel": "Preferred Plan *",
+      "freeLabel": "Free",
+      "premiumLabel": "Premium ($10 USD)",
+      "notsureLabel": "Not Sure Yet",
+      "usageLabel": "How do you plan to use KeepsVault?",
+      "usagePlaceholder": "Your answer",
+      "countryLabel": "Country",
       "submitButton": "Join Waitlist"
     },
     "benefits": {

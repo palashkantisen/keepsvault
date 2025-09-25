@@ -33,15 +33,15 @@
         <input id="g-name" class="input" name="entry.1132170388" placeholder="Your name" required />
         <label class="label" for="g-email" id="waitlist-form-emailLabel">Email Address *</label>
         <input id="g-email" class="input" type="email" name="entry.706857230" placeholder="you@example.com" required />
-        <span class="label">Preferred Plan *</span>
+        <span class="label" id="waitlist-form-planLabel">Preferred Plan *</span>
         <div>
-          <label style="margin-right:16px;"><input type="radio" name="entry.996036042" value="Free" required checked> Free</label>
-          <label style="margin-right:16px;"><input type="radio" name="entry.996036042" value="Premium ($10 USD)"> Premium ($10 USD)</label>
-          <label><input type="radio" name="entry.996036042" value="Not Sure Yet"> Not Sure Yet</label>
+          <label style="margin-right:16px;" id="waitlist-form-freeLabel"><input type="radio" name="entry.996036042" value="Free" required checked> Free</label>
+          <label style="margin-right:16px;" id="waitlist-form-premiumLabel"><input type="radio" name="entry.996036042" value="Premium ($10 USD)"> Premium ($10 USD)</label>
+          <label id="waitlist-form-notsureLabel"><input type="radio" name="entry.996036042" value="Not Sure Yet"> Not Sure Yet</label>
         </div>
-        <label class="label" for="g-usage">How do you plan to use KeepsVault?</label>
+        <label class="label" for="g-usage" id="waitlist-form-usageLabel">How do you plan to use KeepsVault?</label>
         <textarea id="g-usage" class="textarea" name="entry.1147770350" placeholder="Your answer"></textarea>
-        <label class="label" for="g-country">Country</label>
+        <label class="label" for="g-country" id="waitlist-form-countryLabel">Country</label>
         <select id="g-country" class="input" name="entry.784216711">
           <option value="Afghanistan">Afghanistan</option>
           <option value="Albania">Albania</option>
@@ -239,7 +239,7 @@
           <option value="Zimbabwe">Zimbabwe</option>
         </select>
         <div></div>
-        <button class="btn btn-primary" type="submit">Join Waitlist</button>
+        <button class="btn btn-primary" type="submit" id="waitlist-form-submitButton">Join Waitlist</button>
       </div>
     </form>
   </main>

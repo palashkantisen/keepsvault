@@ -5,51 +5,60 @@
   },
   "privacy": {
     "title": "Privacy Policy",
-    "lastUpdated": "Last updated: January 2024",
-    "intro": "This privacy policy explains how KeepsVault collects, uses, and protects your information.",
-    "infoWeCollect": {
-      "title": "Information We Collect",
-      "description": "We collect only the information necessary to provide our service:",
+    "intro": "This policy explains how we handle your personal information. We follow GDPR and global privacy standards to protect your data worldwide.",
+    "collect": {
+      "title": "What we collect",
       "list": [
-        "Account information (email, name)",
-        "Cards and stacks you create",
-        "Files you upload",
-        "Usage data to improve our service"
+        "Account details (name, email).",
+        "Your content (cards, files) that you choose to store.",
+        "Usage data to help run and improve the Service."
       ]
     },
-    "howWeUse": {
-      "title": "How We Use Your Information",
-      "description": "We use your information to:",
+    "use": {
+      "title": "How we use it",
       "list": [
-        "Provide and maintain our service",
-        "Process your requests",
-        "Send important notifications",
-        "Improve our service"
+        "To provide and secure the Service.",
+        "To support you and respond to requests.",
+        "To send important notices about the Service."
       ]
     },
-    "dataSecurity": {
-      "title": "Data Security",
-      "description": "We protect your data with:",
+    "sharing": {
+      "title": "Sharing",
       "list": [
-        "End-to-end encryption",
-        "Secure data centers",
-        "Regular security audits",
-        "Access controls"
+        "We do not sell your data.",
+        "We may use trusted providers (e.g. hosting) under contract.",
+        "We may disclose if required by law."
       ]
     },
-    "yourRights": {
-      "title": "Your Rights",
-      "description": "You have the right to:",
+    "storage": {
+      "title": "Storage and location",
       "list": [
-        "Access your data",
-        "Correct inaccurate information",
-        "Delete your account",
-        "Export your data"
+        "Data is stored securely in reputable cloud regions.",
+        "We apply encryption in transit and at rest."
       ]
     },
-    "contactUs": {
-      "title": "Contact Us",
-      "description": "If you have questions about this privacy policy, contact us at privacy@keepsvault.com"
+    "rights": {
+      "title": "Your rights (GDPR)",
+      "list": [
+        "Access: Request a copy of your personal data",
+        "Rectification: Correct inaccurate or incomplete data",
+        "Erasure: Request deletion of your data",
+        "Portability: Export your data in a machine-readable format",
+        "Objection: Object to processing of your data",
+        "Withdrawal: Withdraw consent at any time"
+      ]
+    },
+    "choices": {
+      "title": "Your choices",
+      "list": [
+        "You can access, correct, or delete your data, subject to law and backups.",
+        "You can stop using the Service at any time."
+      ]
+    },
+    "contact": {
+      "title": "Contact",
+      "email": "To ask about privacy: palashkantisen@gmail.com",
+      "lastUpdated": "Last updated:"
     }
   }
 }

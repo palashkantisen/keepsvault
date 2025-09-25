@@ -87,11 +87,20 @@ function updateMainContent() {
     
     // Form elements
     updateElement('waitlist-form-title', currentTranslations.waitlist.form?.title);
-    updateElement('waitlist-email-label', currentTranslations.waitlist.form?.emailLabel);
-    updateElement('waitlist-email-placeholder', currentTranslations.waitlist.form?.emailPlaceholder);
-    updateElement('waitlist-name-label', currentTranslations.waitlist.form?.nameLabel);
-    updateElement('waitlist-name-placeholder', currentTranslations.waitlist.form?.namePlaceholder);
-    updateElement('waitlist-submit-button', currentTranslations.waitlist.form?.submitButton);
+    updateElement('waitlist-form-nameLabel', currentTranslations.waitlist.form?.nameLabel);
+    updateElement('waitlist-form-emailLabel', currentTranslations.waitlist.form?.emailLabel);
+    updateElement('waitlist-form-planLabel', currentTranslations.waitlist.form?.planLabel);
+    updateElement('waitlist-form-freeLabel', currentTranslations.waitlist.form?.freeLabel);
+    updateElement('waitlist-form-premiumLabel', currentTranslations.waitlist.form?.premiumLabel);
+    updateElement('waitlist-form-notsureLabel', currentTranslations.waitlist.form?.notsureLabel);
+    updateElement('waitlist-form-usageLabel', currentTranslations.waitlist.form?.usageLabel);
+    updateElement('waitlist-form-countryLabel', currentTranslations.waitlist.form?.countryLabel);
+    updateElement('waitlist-form-submitButton', currentTranslations.waitlist.form?.submitButton);
+    
+    // Update placeholders
+    updatePlaceholder('g-name', currentTranslations.waitlist.form?.namePlaceholder);
+    updatePlaceholder('g-email', currentTranslations.waitlist.form?.emailPlaceholder);
+    updatePlaceholder('g-usage', currentTranslations.waitlist.form?.usagePlaceholder);
     
     // Benefits section
     updateElement('waitlist-benefits-title', currentTranslations.waitlist.benefits?.title);
@@ -123,6 +132,14 @@ function updateList(id, items) {
   const element = document.getElementById(id);
   if (element && items && Array.isArray(items)) {
     element.innerHTML = items.map(item => `<li>${item}</li>`).join('');
+  }
+}
+
+// Helper function to update placeholder
+function updatePlaceholder(id, placeholder) {
+  const element = document.getElementById(id);
+  if (element && placeholder) {
+    element.placeholder = placeholder;
   }
 }
 

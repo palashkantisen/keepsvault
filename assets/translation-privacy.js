@@ -82,32 +82,36 @@ function updateMainContent() {
   // Update Privacy page content
   if (currentTranslations.privacy) {
     updateElement('privacy-title', currentTranslations.privacy.title);
-    updateElement('privacy-last-updated', currentTranslations.privacy.lastUpdated);
     updateElement('privacy-intro', currentTranslations.privacy.intro);
     
-    // Information we collect
-    updateElement('privacy-info-title', currentTranslations.privacy.infoWeCollect.title);
-    updateElement('privacy-info-desc', currentTranslations.privacy.infoWeCollect.description);
-    updateList('privacy-info-list', currentTranslations.privacy.infoWeCollect.list);
+    // What we collect
+    updateElement('privacy-collect-title', currentTranslations.privacy.collect.title);
+    updateList('privacy-collect-list', currentTranslations.privacy.collect.list);
     
-    // How we use information
-    updateElement('privacy-use-title', currentTranslations.privacy.howWeUse.title);
-    updateElement('privacy-use-desc', currentTranslations.privacy.howWeUse.description);
-    updateList('privacy-use-list', currentTranslations.privacy.howWeUse.list);
+    // How we use it
+    updateElement('privacy-use-title', currentTranslations.privacy.use.title);
+    updateList('privacy-use-list', currentTranslations.privacy.use.list);
     
-    // Data security
-    updateElement('privacy-security-title', currentTranslations.privacy.dataSecurity.title);
-    updateElement('privacy-security-desc', currentTranslations.privacy.dataSecurity.description);
-    updateList('privacy-security-list', currentTranslations.privacy.dataSecurity.list);
+    // Sharing
+    updateElement('privacy-sharing-title', currentTranslations.privacy.sharing.title);
+    updateList('privacy-sharing-list', currentTranslations.privacy.sharing.list);
     
-    // Your rights
-    updateElement('privacy-rights-title', currentTranslations.privacy.yourRights.title);
-    updateElement('privacy-rights-desc', currentTranslations.privacy.yourRights.description);
-    updateList('privacy-rights-list', currentTranslations.privacy.yourRights.list);
+    // Storage and location
+    updateElement('privacy-storage-title', currentTranslations.privacy.storage.title);
+    updateList('privacy-storage-list', currentTranslations.privacy.storage.list);
     
-    // Contact us
-    updateElement('privacy-contact-title', currentTranslations.privacy.contactUs.title);
-    updateElement('privacy-contact-desc', currentTranslations.privacy.contactUs.description);
+    // Your rights (GDPR)
+    updateElement('privacy-rights-title', currentTranslations.privacy.rights.title);
+    updateList('privacy-rights-list', currentTranslations.privacy.rights.list);
+    
+    // Your choices
+    updateElement('privacy-choices-title', currentTranslations.privacy.choices.title);
+    updateList('privacy-choices-list', currentTranslations.privacy.choices.list);
+    
+    // Contact
+    updateElement('privacy-contact-title', currentTranslations.privacy.contact.title);
+    updateElement('privacy-contact-email', currentTranslations.privacy.contact.email);
+    updateElement('privacy-last-updated', currentTranslations.privacy.contact.lastUpdated);
   }
 }
 

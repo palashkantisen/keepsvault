@@ -95,6 +95,32 @@ function updateMainContent() {
     updateElement('story-truth-p1', currentTranslations.story.truth.p1);
     updateElement('story-truth-p2', currentTranslations.story.truth.p2);
     updateList('story-truth-list', currentTranslations.story.truth.list);
+    
+    // Why section
+    updateElement('story-why-title', currentTranslations.story.why.title);
+    updateElement('story-why-p1', currentTranslations.story.why.p1);
+    updateElement('story-why-p2', currentTranslations.story.why.p2);
+    updateList('story-why-list', currentTranslations.story.why.list);
+    
+    // Mission section
+    updateElement('story-mission-title', currentTranslations.story.mission.title);
+    updateElement('story-mission-p1', currentTranslations.story.mission.p1);
+    updateElement('story-mission-p2', currentTranslations.story.mission.p2);
+    updateList('story-mission-list', currentTranslations.story.mission.list);
+    
+    // Transform section
+    updateElement('story-transform-title', currentTranslations.story.transform.title);
+    updateElement('story-transform-p1', currentTranslations.story.transform.p1);
+    updateElement('story-transform-p2', currentTranslations.story.transform.p2);
+    updateList('story-transform-list', currentTranslations.story.transform.list);
+    
+    // Join section
+    updateElement('story-join-title', currentTranslations.story.join.title);
+    updateElement('story-join-p1', currentTranslations.story.join.p1);
+    updateElement('story-join-p2', currentTranslations.story.join.p2);
+    updateElement('story-join-p3', currentTranslations.story.join.p3);
+    updateElement('story-join-p4', currentTranslations.story.join.p4);
+    updateElement('story-join-signature', currentTranslations.story.join.signature);
   }
 }
 

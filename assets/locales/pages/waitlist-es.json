@@ -9,10 +9,17 @@
     "description": "Obtén acceso temprano a KeepsVault y ayuda a dar forma al futuro de la gestión segura de documentos.",
     "form": {
       "title": "Obtén Acceso Temprano",
-      "emailLabel": "Dirección de Email",
-      "emailPlaceholder": "tu@email.com",
-      "nameLabel": "Nombre Completo",
-      "namePlaceholder": "Tu nombre completo",
+      "nameLabel": "Nombre Completo *",
+      "namePlaceholder": "Tu nombre",
+      "emailLabel": "Dirección de Email *",
+      "emailPlaceholder": "tu@ejemplo.com",
+      "planLabel": "Plan Preferido *",
+      "freeLabel": "Gratis",
+      "premiumLabel": "Premium ($10 USD)",
+      "notsureLabel": "No Estoy Seguro",
+      "usageLabel": "¿Cómo planeas usar KeepsVault?",
+      "usagePlaceholder": "Tu respuesta",
+      "countryLabel": "País",
       "submitButton": "Unirse a la Lista"
     },
     "benefits": {
