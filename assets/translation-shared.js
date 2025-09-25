@@ -35,20 +35,17 @@ async function loadSharedLanguage(languageCode) {
   if (languageCache.has(languageCode)) {
     const duration = Math.round(performance.now() - startTime);
     logPerformance('shared', duration, true);
-    console.log(`📦 Using cached shared language: ${languageCode}`);
     return languageCache.get(languageCode);
   }
   
   // Check if already loading
   if (loadingPromises.has(languageCode)) {
-    console.log(`⏳ Waiting for existing shared language load: ${languageCode}`);
     return await loadingPromises.get(languageCode);
   }
   
   // Create loading promise
   const loadingPromise = (async () => {
     try {
-      console.log(`🌐 Loading shared language: ${languageCode}`);
       
       const response = await fetch(`assets/locales/shared-${languageCode}.json`);
       if (!response.ok) {
@@ -59,18 +56,15 @@ async function loadSharedLanguage(languageCode) {
       const duration = Math.round(performance.now() - startTime);
       logPerformance('shared', duration, false);
       
-      console.log(`✅ Shared language loaded: ${languageCode} (${Object.keys(translations).length} sections)`);
       
       // Cache the result
       languageCache.set(languageCode, translations);
       
       return translations;
     } catch (error) {
-      console.error(`❌ Failed to load shared language ${languageCode}:`, error);
       
       // Fallback to English
       if (languageCode !== 'en') {
-        console.log(`🔄 Falling back to English for shared content`);
         return await loadSharedLanguage('en');
       }
       
@@ -96,20 +90,17 @@ async function loadPageLanguage(pageName, languageCode) {
   if (pageCache.has(cacheKey)) {
     const duration = Math.round(performance.now() - startTime);
     logPerformance('page', duration, true);
-    console.log(`📦 Using cached page language: ${pageName}-${languageCode}`);
     return pageCache.get(cacheKey);
   }
   
   // Check if already loading
   if (pageLoadingPromises.has(cacheKey)) {
-    console.log(`⏳ Waiting for existing page language load: ${pageName}-${languageCode}`);
     return await pageLoadingPromises.get(cacheKey);
   }
   
   // Create loading promise
   const loadingPromise = (async () => {
     try {
-      console.log(`🌐 Loading page language: ${pageName}-${languageCode}`);
       
       const response = await fetch(`assets/locales/pages/${pageName}-${languageCode}.json`);
       if (!response.ok) {
@@ -120,18 +111,15 @@ async function loadPageLanguage(pageName, languageCode) {
       const duration = Math.round(performance.now() - startTime);
       logPerformance('page', duration, false);
       
-      console.log(`✅ Page language loaded: ${pageName}-${languageCode} (${Object.keys(translations).length} sections)`);
       
       // Cache the result
       pageCache.set(cacheKey, translations);
       
       return translations;
     } catch (error) {
-      console.error(`❌ Failed to load page language ${pageName}-${languageCode}:`, error);
       
       // Fallback to English
       if (languageCode !== 'en') {
-        console.log(`🔄 Falling back to English for page content: ${pageName}`);
         return await loadPageLanguage(pageName, 'en');
       }
       
@@ -319,7 +307,6 @@ function initLanguage() {
     if (selectDesktop) selectDesktop.addEventListener('change', onChange);
     if (selectMobile) selectMobile.addEventListener('change', onChange);
   } catch (e) {
-    console.error('Language init failed', e);
   }
 }
 
@@ -327,7 +314,6 @@ function initLanguage() {
 document.addEventListener('change', async (e) => {
   if (e.target.id === 'languageSwitch' || e.target.id === 'languageSwitch_m') {
     const val = e.target.value;
-    console.log(`🌐 Language switch triggered: ${val}`);
     
     // Call switchLanguage if it's available
     if (window.switchLanguage) {
@@ -338,7 +324,6 @@ document.addEventListener('change', async (e) => {
       const other = document.getElementById(otherId);
       if (other) other.value = val;
     } else {
-      console.error('❌ switchLanguage function not available yet');
     }
   }
 });
@@ -349,12 +334,10 @@ const pageUpdateRegistry = [];
 // Register a page update function
 function registerPageUpdate(updateFunction) {
   pageUpdateRegistry.push(updateFunction);
-  console.log(`📝 Registered page update function. Total: ${pageUpdateRegistry.length}`);
 }
 
 // Switch language function for header
 async function switchLanguage(languageCode) {
-  console.log(`🌐 Switching to language: ${languageCode}`);
   await applyLanguage(languageCode);
   localStorage.setItem('kv-language', languageCode);
   
@@ -364,18 +347,14 @@ async function switchLanguage(languageCode) {
     detail: { language: languageCode } 
   });
   window.dispatchEvent(event);
-  console.log(`✅ languageChanged event dispatched for: ${languageCode}`);
   
   // Trigger all registered page updates
-  console.log(`🌐 Triggering ${pageUpdateRegistry.length} page content updates for: ${languageCode}`);
   for (const updateFunction of pageUpdateRegistry) {
     try {
       await updateFunction(languageCode);
     } catch (error) {
-      console.error(`❌ Page update failed:`, error);
     }
   }
-  console.log(`✅ All page content updates completed for: ${languageCode}`);
 }
 
 // Performance monitoring
@@ -391,7 +370,6 @@ const performanceStats = {
 function clearLanguageCache() {
   languageCache.clear();
   pageCache.clear();
-  console.log('🧹 Language cache cleared');
 }
 
 function getCacheStats() {
@@ -421,7 +399,6 @@ function logPerformance(operation, duration, fromCache = false) {
   
   performanceStats.totalLoadTime += duration;
   
-  console.log(`📊 ${operation} load: ${duration}ms ${fromCache ? '(cached)' : '(network)'}`);
 }
 
 // Debug function to see what's currently loaded
@@ -435,7 +412,6 @@ function getLoadedLanguages() {
     }
   };
   
-  console.log('📋 Currently loaded languages:', loaded);
   return loaded;
 }
 
@@ -452,9 +428,7 @@ function validateNoPreloading() {
   const extraPages = loaded.pages.filter(page => !expectedPages.includes(page));
   
   if (extraShared.length > 0 || extraPages.length > 0) {
-    console.warn('⚠️ Unnecessary languages loaded:', { extraShared, extraPages });
   } else {
-    console.log('✅ No unnecessary preloading detected');
   }
   
   return { extraShared, extraPages };

@@ -8,7 +8,6 @@ let currentTranslations = null;
 // Load page-specific language file
 async function loadPageLanguage(languageCode) {
   try {
-    console.log(`🌐 Loading page language: ${languageCode} for index page`);
     
     const response = await fetch(`assets/locales/pages/index-${languageCode}.json`);
     if (!response.ok) {
@@ -16,14 +15,11 @@ async function loadPageLanguage(languageCode) {
     }
     
     const pageTranslations = await response.json();
-    console.log(`✅ Page language loaded: ${languageCode} for index (${Object.keys(pageTranslations).length} sections)`);
     return pageTranslations;
   } catch (error) {
-    console.error(`❌ Failed to load page language ${languageCode}:`, error);
     
     // Fallback to English
     if (languageCode !== 'en') {
-      console.log(`🔄 Falling back to English for page content`);
       return await loadPageLanguage('en');
     }
     
