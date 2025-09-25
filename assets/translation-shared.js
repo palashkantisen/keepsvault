@@ -21,35 +21,131 @@ let sharedTranslations = null;
 let currentLanguage = 'en';
 let isLoadingLanguage = false;
 
-// Load shared language file
+// Caching system for loaded languages
+const languageCache = new Map();
+const loadingPromises = new Map();
+const pageCache = new Map();
+const pageLoadingPromises = new Map();
+
+// Load shared language file with caching and deduplication
 async function loadSharedLanguage(languageCode) {
-  if (isLoadingLanguage) return;
+  const startTime = performance.now();
   
-  try {
-    isLoadingLanguage = true;
-    console.log(`🌐 Loading shared language: ${languageCode}`);
-    
-    const response = await fetch(`assets/locales/shared-${languageCode}.json`);
-    if (!response.ok) {
-      throw new Error(`HTTP ${response.status}: ${response.statusText}`);
-    }
-    
-    const translations = await response.json();
-    console.log(`✅ Shared language loaded: ${languageCode} (${Object.keys(translations).length} sections)`);
-    return translations;
-  } catch (error) {
-    console.error(`❌ Failed to load shared language ${languageCode}:`, error);
-    
-    // Fallback to English
-    if (languageCode !== 'en') {
-      console.log(`🔄 Falling back to English for shared content`);
-      return await loadSharedLanguage('en');
-    }
-    
-    throw error;
-  } finally {
-    isLoadingLanguage = false;
+  // Check cache first
+  if (languageCache.has(languageCode)) {
+    const duration = Math.round(performance.now() - startTime);
+    logPerformance('shared', duration, true);
+    console.log(`📦 Using cached shared language: ${languageCode}`);
+    return languageCache.get(languageCode);
   }
+  
+  // Check if already loading
+  if (loadingPromises.has(languageCode)) {
+    console.log(`⏳ Waiting for existing shared language load: ${languageCode}`);
+    return await loadingPromises.get(languageCode);
+  }
+  
+  // Create loading promise
+  const loadingPromise = (async () => {
+    try {
+      console.log(`🌐 Loading shared language: ${languageCode}`);
+      
+      const response = await fetch(`assets/locales/shared-${languageCode}.json`);
+      if (!response.ok) {
+        throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+      }
+      
+      const translations = await response.json();
+      const duration = Math.round(performance.now() - startTime);
+      logPerformance('shared', duration, false);
+      
+      console.log(`✅ Shared language loaded: ${languageCode} (${Object.keys(translations).length} sections)`);
+      
+      // Cache the result
+      languageCache.set(languageCode, translations);
+      
+      return translations;
+    } catch (error) {
+      console.error(`❌ Failed to load shared language ${languageCode}:`, error);
+      
+      // Fallback to English
+      if (languageCode !== 'en') {
+        console.log(`🔄 Falling back to English for shared content`);
+        return await loadSharedLanguage('en');
+      }
+      
+      throw error;
+    } finally {
+      // Clean up loading promise
+      loadingPromises.delete(languageCode);
+    }
+  })();
+  
+  // Store the promise to prevent duplicate requests
+  loadingPromises.set(languageCode, loadingPromise);
+  
+  return await loadingPromise;
+}
+
+// Load page-specific language file with caching and deduplication
+async function loadPageLanguage(pageName, languageCode) {
+  const startTime = performance.now();
+  const cacheKey = `${pageName}-${languageCode}`;
+  
+  // Check cache first
+  if (pageCache.has(cacheKey)) {
+    const duration = Math.round(performance.now() - startTime);
+    logPerformance('page', duration, true);
+    console.log(`📦 Using cached page language: ${pageName}-${languageCode}`);
+    return pageCache.get(cacheKey);
+  }
+  
+  // Check if already loading
+  if (pageLoadingPromises.has(cacheKey)) {
+    console.log(`⏳ Waiting for existing page language load: ${pageName}-${languageCode}`);
+    return await pageLoadingPromises.get(cacheKey);
+  }
+  
+  // Create loading promise
+  const loadingPromise = (async () => {
+    try {
+      console.log(`🌐 Loading page language: ${pageName}-${languageCode}`);
+      
+      const response = await fetch(`assets/locales/pages/${pageName}-${languageCode}.json`);
+      if (!response.ok) {
+        throw new Error(`Page HTTP ${response.status}: ${response.statusText}`);
+      }
+      
+      const translations = await response.json();
+      const duration = Math.round(performance.now() - startTime);
+      logPerformance('page', duration, false);
+      
+      console.log(`✅ Page language loaded: ${pageName}-${languageCode} (${Object.keys(translations).length} sections)`);
+      
+      // Cache the result
+      pageCache.set(cacheKey, translations);
+      
+      return translations;
+    } catch (error) {
+      console.error(`❌ Failed to load page language ${pageName}-${languageCode}:`, error);
+      
+      // Fallback to English
+      if (languageCode !== 'en') {
+        console.log(`🔄 Falling back to English for page content: ${pageName}`);
+        return await loadPageLanguage(pageName, 'en');
+      }
+      
+      throw error;
+    } finally {
+      // Clean up loading promise
+      pageLoadingPromises.delete(cacheKey);
+    }
+  })();
+  
+  // Store the promise to prevent duplicate requests
+  pageLoadingPromises.set(cacheKey, loadingPromise);
+  
+  return await loadingPromise;
 }
 
 // Detect browser language
@@ -282,6 +378,88 @@ async function switchLanguage(languageCode) {
   console.log(`✅ All page content updates completed for: ${languageCode}`);
 }
 
+// Performance monitoring
+const performanceStats = {
+  sharedLoads: 0,
+  pageLoads: 0,
+  cacheHits: 0,
+  totalLoadTime: 0,
+  startTime: Date.now()
+};
+
+// Cache management functions
+function clearLanguageCache() {
+  languageCache.clear();
+  pageCache.clear();
+  console.log('🧹 Language cache cleared');
+}
+
+function getCacheStats() {
+  return {
+    sharedLanguages: languageCache.size,
+    pageLanguages: pageCache.size,
+    totalCached: languageCache.size + pageCache.size,
+    performance: {
+      sharedLoads: performanceStats.sharedLoads,
+      pageLoads: performanceStats.pageLoads,
+      cacheHits: performanceStats.cacheHits,
+      averageLoadTime: performanceStats.totalLoadTime / (performanceStats.sharedLoads + performanceStats.pageLoads) || 0,
+      uptime: Date.now() - performanceStats.startTime
+    }
+  };
+}
+
+// Performance logging
+function logPerformance(operation, duration, fromCache = false) {
+  if (fromCache) {
+    performanceStats.cacheHits++;
+  } else if (operation === 'shared') {
+    performanceStats.sharedLoads++;
+  } else if (operation === 'page') {
+    performanceStats.pageLoads++;
+  }
+  
+  performanceStats.totalLoadTime += duration;
+  
+  console.log(`📊 ${operation} load: ${duration}ms ${fromCache ? '(cached)' : '(network)'}`);
+}
+
+// Debug function to see what's currently loaded
+function getLoadedLanguages() {
+  const loaded = {
+    shared: Array.from(languageCache.keys()),
+    pages: Array.from(pageCache.keys()),
+    currentlyLoading: {
+      shared: Array.from(loadingPromises.keys()),
+      pages: Array.from(pageLoadingPromises.keys())
+    }
+  };
+  
+  console.log('📋 Currently loaded languages:', loaded);
+  return loaded;
+}
+
+// Ensure no preloading - only load what's needed
+function validateNoPreloading() {
+  const loaded = getLoadedLanguages();
+  const currentLang = localStorage.getItem('kv-language') || 'en';
+  
+  // Check if we have more than necessary loaded
+  const expectedShared = [currentLang];
+  const expectedPages = []; // Will be populated based on current page
+  
+  const extraShared = loaded.shared.filter(lang => !expectedShared.includes(lang));
+  const extraPages = loaded.pages.filter(page => !expectedPages.includes(page));
+  
+  if (extraShared.length > 0 || extraPages.length > 0) {
+    console.warn('⚠️ Unnecessary languages loaded:', { extraShared, extraPages });
+  } else {
+    console.log('✅ No unnecessary preloading detected');
+  }
+  
+  return { extraShared, extraPages };
+}
+
 // Export functions for global access
 window.updateSharedNavigation = updateNavigation;
 window.updateSharedFooter = updateFooter;
@@ -289,5 +467,10 @@ window.updateSharedLanguageSwitcher = updateLanguageSwitcher;
 window.initLanguage = initLanguage;
 window.applyLanguage = applyLanguage;
 window.loadSharedLanguage = loadSharedLanguage;
+window.loadPageLanguage = loadPageLanguage;
 window.switchLanguage = switchLanguage;
 window.registerPageUpdate = registerPageUpdate;
+window.clearLanguageCache = clearLanguageCache;
+window.getCacheStats = getCacheStats;
+window.getLoadedLanguages = getLoadedLanguages;
+window.validateNoPreloading = validateNoPreloading;

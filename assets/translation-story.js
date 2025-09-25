@@ -4,14 +4,10 @@
 
 // Global state
 let currentTranslations = null;
-let isLoadingPageLanguage = false;
 
 // Load page-specific language file
 async function loadPageLanguage(languageCode) {
-  if (isLoadingPageLanguage) return;
-  
   try {
-    isLoadingPageLanguage = true;
     console.log(`🌐 Loading page language: ${languageCode} for story page`);
     
     const response = await fetch(`assets/locales/pages/story-${languageCode}.json`);
@@ -32,8 +28,6 @@ async function loadPageLanguage(languageCode) {
     }
     
     throw error;
-  } finally {
-    isLoadingPageLanguage = false;
   }
 }
 
