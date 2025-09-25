@@ -76,6 +76,52 @@ function initTheme() {
 // ==============================
 // EXPANDABLE CARDS
 // ==============================
+
+// Helper function to get translated "Read more" text
+function getTranslatedReadMoreText(buttonId) {
+  if (!window.currentTranslations) return null;
+  
+  // Map button IDs to translation paths
+  const translationMap = {
+    'feature-cards-readmore': window.currentTranslations.features?.cardsStacks?.readMore,
+    'feature-sharing-readmore': window.currentTranslations.features?.secureSharing?.readMore,
+    'feature-files-readmore': window.currentTranslations.features?.filesNotes?.readMore,
+    'feature-reminders-readmore': window.currentTranslations.features?.smartReminders?.readMore,
+    'feature-anywhere-readmore': window.currentTranslations.features?.worksAnywhere?.readMore,
+    'feature-privacy-readmore': window.currentTranslations.features?.privacyByDesign?.readMore,
+    'why-privacy-readmore': window.currentTranslations.whyKeepsVault?.privacy?.readMore,
+    'why-security-readmore': window.currentTranslations.whyKeepsVault?.security?.readMore,
+    'why-simplicity-readmore': window.currentTranslations.whyKeepsVault?.simplicity?.readMore
+  };
+  
+  return translationMap[buttonId] || null;
+}
+
+// Helper function to get translated "Hide" text
+function getTranslatedHideText() {
+  if (!window.currentTranslations) return 'Hide';
+  
+  // Check if we have a hide translation in the current language
+  if (window.currentTranslations.hide) {
+    return window.currentTranslations.hide;
+  }
+  
+  // Fallback based on current language
+  const currentLang = window.currentLanguage || 'en';
+  const hideTranslations = {
+    'es': 'Ocultar',
+    'fr': 'Masquer',
+    'de': 'Verstecken',
+    'it': 'Nascondi',
+    'pt': 'Ocultar',
+    'ru': 'Скрыть',
+    'zh': '隐藏',
+    'ja': '非表示',
+    'ko': '숨기기'
+  };
+  
+  return hideTranslations[currentLang] || 'Hide';
+}
 function initExpandableCards() {
   document.addEventListener('click', (e) => {
     const toggleBtn = e.target.closest('[data-toggle]');
@@ -93,11 +139,31 @@ function initExpandableCards() {
     
     // Update button text and classes based on current state
     if (expandableContent.hidden) {
-      toggleBtn.textContent = 'Read more';
+      // Get the original translated "Read more" text from the button's ID
+      const buttonId = toggleBtn.id;
+      if (buttonId && window.currentTranslations) {
+        // Try to get the translated text from the current translations
+        const translatedText = getTranslatedReadMoreText(buttonId);
+        if (translatedText) {
+          toggleBtn.textContent = translatedText;
+        } else {
+          // Fallback: try to get from the current page translations
+          const currentLang = window.currentLanguage || 'en';
+          const fallbackText = currentLang === 'es' ? 'Leer más' : 'Read more';
+          toggleBtn.textContent = fallbackText;
+        }
+      } else {
+        // Fallback based on current language
+        const currentLang = window.currentLanguage || 'en';
+        const fallbackText = currentLang === 'es' ? 'Leer más' : 'Read more';
+        toggleBtn.textContent = fallbackText;
+      }
       toggleBtn.classList.remove('expanded');
       card.classList.remove('expanded');
     } else {
-      toggleBtn.textContent = 'Hide';
+      // For "Hide" text, we need to get the appropriate translation
+      const hideText = getTranslatedHideText();
+      toggleBtn.textContent = hideText;
       toggleBtn.classList.add('expanded');
       card.classList.add('expanded');
     }

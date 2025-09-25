@@ -171,6 +171,7 @@ async function applyLanguage(langCode) {
     const translations = await loadSharedLanguage(langCode);
     sharedTranslations = translations;
     currentLanguage = langCode;
+    window.currentLanguage = langCode;
     
     // Update shared content
     updateNavigation();

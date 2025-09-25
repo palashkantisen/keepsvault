@@ -238,6 +238,9 @@ function updateMainContent() {
     updateElement('contact-other-ways-email', currentTranslations.contact.otherWays.email);
     updateElement('contact-other-ways-response', currentTranslations.contact.otherWays.responseTime);
   }
+  
+  // Store current translations globally for expandable cards
+  window.currentTranslations = currentTranslations;
 }
 
 // Helper function to update element text
